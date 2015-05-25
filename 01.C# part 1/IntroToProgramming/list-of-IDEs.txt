@@ -1,0 +1,29 @@
+1.Oracle Netbeans
+Netbeans is an open-source environment, for developing primary with Java,
+but also supports other languages like C/C++, Ruby, HTML5, PHP and more.
+Netbeans is extremely extensible via its plugin-centric design, allowing 
+you to add additional language syntax support and libraries, among other things.
+
+2.Eclipse
+Eclipse is quite comprehensive and even similar to Netbeans in a variety of ways,
+including its use of Java and plugin architecture. However, Eclipse as an IDE comes
+in a wild variety of flavors, catering to various needs and objectives in software 
+development workflows.
+
+3.Code::Blocks
+Code::Blocks is free, open source cross-platform, which is exceptionally lightweight
+in size, yet still quite functional and feature-rich IDE. You can load up a number of
+under-the-hood compiler engines, ranging from GCC and LLVM, to Digital Mars and Open Watcom.
+Code::Blocks also takes advantage of multi-core compiling, allowing you to get the job done faster.
+
+4.Aptana Studio 3
+Aptana offers one of the most powerful open-source IDEs. Based on Eclipse, it supports
+JavaScript, HTML, PHP, Ruby on Rails, and Python and more. It’s been completely re-built
+to provide a faster and seamless environment for developing and testing an entire
+web application using a single environment.
+
+5.Cloud 9 IDE
+Cloud 9 allows you to collaborate publicly or privately in workspaces. Write, run
+and debug code from the cloud, working with team members remotely and in real-time,
+with group editing and chatting capabilities for seamless communication
+and more effective collaboration. 
