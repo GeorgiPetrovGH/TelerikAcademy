@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration form</title>
+    </head>
+    <body>
+      <form>
+          <table border="1">
+            <tfoot>
+                <tr bgcolor="#87ceeb">
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Submit"/>
+                        <input type="reset" id="clean-form" value="Clean this form" />
+                    </td>
+                </tr>
+            </tfoot>
+              <tbody>
+                  <tr>
+                        <td align="center" width="150px"><label for="last-name">Last Name</label></td>
+                        <td width="300px">
+                            <input type="text" name="last name" id="last-name" style="width: 280px"/>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td align="center"><laber for="first-name">First Name</label></td>
+                        <td>
+                            <input type="text" name="first name" id="fist-name" style="width: 280px"/>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td align="center"><laber for="address">Address</label></td>
+                        <td>
+                            <textarea name="address" id="address" style="width: 280px"></textarea>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td align="center"><laber for="city">City</label></td>
+                        <td>
+                            <input type="text" name="city" id="city"/>
+                            <laber for="state">State</label>
+                            <input type="text" name="state" id="state" style="width: 50px"/>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td align="center"><laber for="postal-code">Zip/Postal Code</label></td>
+                        <td>
+                            <input type="text" name="postal code" id="postal-code"/>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td align="center"><laber for="country">Country</label></td>
+                        <td>
+                          <select name="country" id="country"  style="width: 142px">
+                              <option value="Bulgaria" selected="selected">Bulgaria</option>
+                              <option value="Other">Other</option>
+                          </select>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td align="center"><laber for="phone">Phone(country code,area code, number)</label></td>
+                        <td>
+                            (+
+                            <input type="text" name="phone" id="phone" style="width: 50px"/>
+                            )
+                            <input type="text" name="phone" id="phone" style="width: 50px"/>
+                            <input type="text" name="phone" id="phone"/>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td align="center"><label for="email">E-mail</label></td>
+                        <td>
+                            <input type="text" name="last name" id="email"/>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td align="center"><label for="birth-date">Birth date</label></td>
+                        <td>
+                            <input type="text" name="last name" id="birth-date" placeholder="dd.mm.yyyy"/>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td align="center"><laber for="gender">Gender</label></td>
+                        <td>
+                          <select name="genedr" id="gender">
+                              <option value="Male" selected="selected">Male</option>
+                              <option value="Female">Female</option>
+                          </select>
+                        </td>
+                  </tr>
+                  <tr>
+                        <td align="center"><laber for="starting-date">Starting date</label></td>
+                        <td>
+                              <input name="starting-date" id="starting-date" type="radio" value="Spring 2015" />Spring 2015
+					                    <input name="starting-date" id="starting-date" type="radio" value="Summer 2015" />Summer 2015
+                        </td>
+                  </tr>
+                  <tr>
+                        <td align="center"><laber for="comments">Comments/Quiestions</label></td>
+                        <td>
+                            <textarea name="comments" id="comments" style="width: 280px"></textarea>
+                        </td>
+                  </tr>
+              </tbody>
+          </table>
+        </form>
+    </body>
+</html>
