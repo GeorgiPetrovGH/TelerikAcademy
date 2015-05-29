@@ -1,0 +1,25 @@
+body{
+	background-color: #E6E6E6;
+}
+body div.text {
+	color: #333333;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid black;
+}
+div>div {
+	color: #0099FF;
+}
+input {
+	text-align: right;
+	width: 100px;
+	padding-right: 3px;
+}
+span {
+	font-size: 20px;
+	text-decoration: underline;
+	font-weight: bold;	
+	color: #000000;
+	display: block;
+	margin-bottom: 15px;	
+}
