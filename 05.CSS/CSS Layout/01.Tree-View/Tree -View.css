@@ -1,0 +1,29 @@
+body {
+	font-size: 18px;
+	background-color: #E6E6E6;	
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+ul {
+    list-style-type: none;
+}
+ul ul {
+    display: none;
+}
+ul ul li a {
+        color: #666666;
+    }
+
+    ul li:hover ul {
+        display: block;
+    }
+
+    ul li a:hover {
+        text-decoration: underline;
+        color: #00E6E6;
+    }
+div h3 {
+    text-decoration: underline;
+}

@@ -1,0 +1,48 @@
+body {
+    font-family: Arial;       
+}
+table {
+    background-color:#191943;
+    width:475px;
+    height: 250px;    
+    border: 0;
+    padding: 10px;
+
+    color: #FFFF99;
+    font-size: 14px; 
+}
+th {
+	font-size: 22px;
+	font-weight: bold;
+	text-align: left;
+}
+td {
+    
+}
+.name {
+	color: #ffffff;
+	font-style: italic;
+}
+a {
+	color: #FFFF99;
+	text-decoration: none;
+}
+.heading
+{
+	color: #CC99FF;
+}
+.grey {
+	color:#CCCCCC;
+}
+.red {
+	color: #B82E00;
+	font-weight: bold;
+}
+.orange {
+	color: #FF9900;
+	font-weight: bold;
+}
+.green {
+	color: #009900;
+	font-weight: bold;
+}

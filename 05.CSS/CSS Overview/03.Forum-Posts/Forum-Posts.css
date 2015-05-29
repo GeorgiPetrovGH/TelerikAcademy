@@ -1,0 +1,40 @@
+body {
+    background-color:#9B8E9B;
+    font-family:"Times New Roman";
+    font-size: 18px;
+}
+body > header > h1 {
+	font-size: 32px;
+	text-align: center;
+	color:#FFD119;
+}
+h1 {
+	font-size: 24px;	
+	color:#FFD119;
+}
+nav ul li {
+	font-size: 24px;
+	list-style-type:none;
+	text-align: center; 	
+}
+nav ul li a {
+	color: #66B966;
+	text-decoration: none;	
+}
+nav > ul > li:last-child a {
+    text-decoration: underline;
+}
+nav ul li a:hover {	
+	text-decoration: underline;	
+}
+footer p {
+	font-size: 14px;
+}
+section article footer p a {
+    text-decoration:none;
+    color:black;
+}
+body > footer {
+	text-align: center;
+	font-size: 16px;
+}
