@@ -303,8 +303,9 @@ function problem8() {
             }
         }
         if (number === 0) { 
-            result = 'Zero';
+            result = 'zero';
         } 
+        result = result.charAt(0).toUpperCase() + result.substring(1);
         document.getElementById('pr8answer').innerHTML = result;
         console.log('Problem 8: ' + result);           
     } else {
