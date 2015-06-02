@@ -254,18 +254,24 @@ function problem8() {
 
     if (!isNaN(number) && number !== '' && number * 1 >= 0 && number * 1 <= 999 && ((number * 1) % 1 === 0)) {
         number *= 1;
+        
         switch (hundred)
             {
-                case 1: result += 'one hundred and '; break;
-                case 2: result += 'two hundred and '; break;
-                case 3: result += 'three hundred and '; break;
-                case 4: result += 'four hundred and '; break;
-                case 5: result += 'five hundred and '; break;
-                case 6: result += 'six hundred and '; break;
-                case 7: result += 'seven hundred and '; break;
-                case 8: result += 'eight hundred and '; break;
-                case 9: result += 'nine hundred and '; break;
+                case 1: result += 'one hundred'; break;
+                case 2: result += 'two hundred'; break;
+                case 3: result += 'three hundred'; break;
+                case 4: result += 'four hundred'; break;
+                case 5: result += 'five hundred'; break;
+                case 6: result += 'six hundred'; break;
+                case 7: result += 'seven hundred'; break;
+                case 8: result += 'eight hundred'; break;
+                case 9: result += 'nine hundred'; break;
             }
+        
+        if (number % 100 !== 0 && number >= 100) {
+            result += ' and ';
+        }
+
         if (ten === 1) {
             switch (one) {
                 case 0: result += 'ten'; break;
