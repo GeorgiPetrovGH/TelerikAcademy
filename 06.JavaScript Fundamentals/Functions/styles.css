@@ -1,0 +1,54 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 16px;
+	background-color: #E6E6E6;
+}
+.problem {
+	margin: 0px;
+	padding: 0px;
+	margin-left: 10px;
+	margin-right: 30px;
+	margin-top: 10px;
+	padding-bottom: 15px;
+	border-bottom: 2px solid black;
+}
+.title {
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.answer {
+	font-style: italic;
+	color: #66CCFF;
+}
+input {
+	text-align: right;
+	width: 175px;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 5px;
+	padding-right: 5px;
+}
+button {
+	margin: 0px;
+	padding: 0px;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.brackets {
+	font-size: 13px;	
+	margin: 0px;
+	margin-left: 425px;
+	padding: 0px;
+}
+.task3 {
+	margin: 0px;
+	margin-top: 10px;	
+	padding: 0px;
+}
