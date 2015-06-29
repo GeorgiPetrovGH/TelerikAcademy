@@ -122,7 +122,9 @@ function solve() {
       return this.students.slice();
 		},
 		submitHomework: function(studentID, homeworkID) {
-      if(studentId < 1 || studentID > this.students.length) {
+      studentID = studentID * 1;
+      homeworkID = homeworkID * 1;
+      if(studentID < 1 || studentID > this.students.length) {
         throw new Error('Invalid studentID');
       }
 
