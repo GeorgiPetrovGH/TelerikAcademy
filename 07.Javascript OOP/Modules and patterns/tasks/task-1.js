@@ -100,6 +100,32 @@ function solve() {
     };          
   }
 
+  function validateExamResult(arrayExams){
+    var i,
+        j,
+        len = arrayExams.length,
+        idsArray = [];
+
+        if(!Array.isArray(arrayExams)){
+          throw new Error('Invalid input of the arrray')
+        }
+
+        if(arrayExams.some(function(item){
+          return (isNaN(item.StudentID) || isNaN(item.score) || item.StudentID < 1 || item.StudentID > Course.students.length);
+        })){
+          throw new Error('Invalid StudentID or score');
+        }
+
+        for (i = 0; i < len-1; i+=1){
+          for(j = i+1; j < len; j+=1){
+            if(arrayExams[i].StudentID === arrayExams[j].StudentID){
+              throw new Error('Can\'t have the same ID more than once');
+            }
+          }
+        }
+        
+  }
+
   var Course = {
     init: function(title, presentations) {      
       this.title = title;
@@ -133,6 +159,7 @@ function solve() {
       }
 		},
 		pushExamResults: function(results) {
+      validateExamResult(results);
 		},
 		getTopStudents: function() {
 		}
