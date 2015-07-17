@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ClassSizeInCSharp", "ClassSizeInCSharp\01.ClassSizeInCSharp.csproj", "{18828F1A-9964-4C35-BA9E-AEA19B30F961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Method-PrintStatistics", "Method-PrintStatistics\02.Method-PrintStatistics.csproj", "{6DFB0D0E-82B7-4121-A8D6-53CB5B37456F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18828F1A-9964-4C35-BA9E-AEA19B30F961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18828F1A-9964-4C35-BA9E-AEA19B30F961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18828F1A-9964-4C35-BA9E-AEA19B30F961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18828F1A-9964-4C35-BA9E-AEA19B30F961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DFB0D0E-82B7-4121-A8D6-53CB5B37456F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DFB0D0E-82B7-4121-A8D6-53CB5B37456F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DFB0D0E-82B7-4121-A8D6-53CB5B37456F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DFB0D0E-82B7-4121-A8D6-53CB5B37456F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
