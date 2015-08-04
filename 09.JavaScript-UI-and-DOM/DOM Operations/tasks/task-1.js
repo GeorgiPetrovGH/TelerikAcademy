@@ -34,6 +34,7 @@ module.exports = function () {
 
   	for(var i = 0, len = contents.length; i<len; i+=1){
       var currentElement = contents[i];
+      
       if(typeof currentElement !== 'string' && typeof currentElement !== 'number') {
         throw new Error("Invalid contents input");
       }
