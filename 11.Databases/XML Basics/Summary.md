@@ -1,9 +1,9 @@
 # XML Summary
 
 ###  _What does the XML language represent? What is it used for?_
-1. XML stands for EXtensible Markup Language.
-1. XML was designed to store and transport data.
-1. XML was designed to be both human- and machine-readable.
+* XML stands for EXtensible Markup Language.
+* XML was designed to store and transport data.
+* XML was designed to be both human- and machine-readable.
 
-###  _ What do namespaces represent in an XML document? What are they used for?_
-1. Namespaces in XML documents allow using different tags with the same name.
+###  _What do namespaces represent in an XML document? What are they used for?_
+* Namespaces in XML documents allow using different tags with the same name.
