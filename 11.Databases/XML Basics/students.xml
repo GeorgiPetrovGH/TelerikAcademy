@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="students.xsl"?>
+
+<students xmlns="urn:students">
+	<student>
+		<name>John</name>
+		<gender>Male</gender>
+		<birthdate>1990-10-10</birthdate>
+		<phone>555123456</phone>
+		<email>john@john.com</email>
+		<course>Databases</course>
+		<specialty>Web</specialty>
+		<faculty-number>123456</faculty-number>
+		<exams>
+			<exam>
+				<name>HQC</name>
+				<tutor>Nikolay Kostov</tutor>
+				<score>100</score>
+			</exam>
+			<exam>
+				<name>DSA</name>
+				<tutor>Nikolay Kostov</tutor>
+				<score>80</score>
+			</exam>
+		</exams>
+    <enrollment-info>
+      <enrollment-date>2014-10-15</enrollment-date>
+      <exam-score>70</exam-score>
+      <teacher-endorsements>Don't know what this is :)</teacher-endorsements>
+    </enrollment-info>
+	</student>
+	<student>
+		<name>Jane</name>
+		<gender>Female</gender>
+		<birthdate>1995-05-05</birthdate>
+		<phone>555123456</phone>
+		<email>jane@jane.com</email>
+		<course>Databases</course>
+		<specialty>Mobile</specialty>
+		<faculty-number>654321</faculty-number>
+		<exams>
+			<exam>
+				<name>HQC</name>
+				<tutor>Nikolay Kostov</tutor>
+				<score>95</score>
+			</exam>
+			<exam>
+				<name>DSA</name>
+				<tutor>Nikolay Kostov</tutor>
+				<score>65</score>
+			</exam>
+		</exams>
+	</student>
+</students>
