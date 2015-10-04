@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="catalogueStyleSheet.xsl" ?>
+
+<catalogue>
+  <album>
+    <name>Little Dragon</name>
+    <artist>Little Dragon</artist>
+    <year>20070</year>
+    <producer>John</producer>
+    <price>15.99</price>
+    <songs>
+      <song>
+        <title>Twice</title>
+        <duration>3:10</duration>
+      </song>
+      <song>
+        <title>123</title>
+        <duration>4:30</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Machine Dreams</name>
+    <artist>Little Dragon</artist>
+    <year>some string</year>
+    <producer>John</producer>
+    <price>thirteen</price>
+    <songs>
+      <song>
+        <title>Looking Glass</title>
+        <duration>4:50</duration>
+      </song>
+      <song>
+        <title>Feather</title>
+        <duration>4:55</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Blood Like Lemonade</name>
+    <artist>Morcheeba</artist>
+    <year>2010</year>
+    <producer>John</producer>
+    <price>20.99</price>
+    <songs>
+      <song>
+        <title>Blood Like Lemonade</title>
+        <duration>4:50</duration>
+      </song>      
+    </songs>
+  </album>
+</catalogue>

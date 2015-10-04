@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catalogue>
+  <album>
+    <name>Little Dragon</name>
+    <artist>Little Dragon</artist>
+    <year>2007</year>
+    <producer>John</producer>
+    <price>15.99</price>
+    <songs>
+      <song>
+        <title>Twice</title>
+        <duration>3:10</duration>
+      </song>
+      <song>
+        <title>Constant Surprises</title>
+        <duration>4:30</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Machine Dreams</name>
+    <artist>Little Dragon</artist>
+    <year>2009</year>
+    <producer>John</producer>
+    <price>13.99</price>
+    <songs>
+      <song>
+        <title>Looking Glass</title>
+        <duration>4:50</duration>
+      </song>
+      <song>
+        <title>Feather</title>
+        <duration>4:55</duration>
+      </song>
+    </songs>
+  </album>
+</catalogue>

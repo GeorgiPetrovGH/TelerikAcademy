@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<albums>
+	<album>
+		<name>Little Dragon</name>
+		<artist>Little Dragon</artist>
+	</album>
+	<album>
+		<name>Machine Dreams</name>
+		<artist>Little Dragon</artist>
+	</album>
+	<album>
+		<name>Blood Like Lemonade</name>
+		<artist>Morcheeba</artist>
+	</album>
+</albums>
