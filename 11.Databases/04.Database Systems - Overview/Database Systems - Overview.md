@@ -3,7 +3,7 @@
 
 #### Answer following questions in Markdown format (`.md` file)
 
-1.  __What database models do you know?__
+__1. What database models do you know?__
 
 A database model is a type of data model that determines the logical structure of a database and fundamentally determines in which manner data can be stored, organized, and manipulated.  
 
@@ -16,33 +16,33 @@ A database model is a type of data model that determines the logical structure o
  - Entity–attribute–value model - Entity–attribute–value model (EAV) is a data model to describe entities where the number of attributes (properties, parameters) that can be used to describe them is potentially vast, but the number that will actually apply to a given entity is relatively modest.
  - Object-relational database - An object-relational database (ORD) is a database management system (DBMS) similar to a relational database, but with an object-oriented database model: objects, classes and inheritance are directly supported in database schemas and in the query language.
 
-2.  __Which are the main functions performed by a Relational Database Management System (RDBMS)?__
+__2. Which are the main functions performed by a Relational Database Management System (RDBMS)?__
 
 The main functions performed by a RDBMS are management of the data. This includes Creating / altering / deleting tables and relationships between them (database schema), adding, hanging, deleting, searching and retrieving of data stored in the tables. It also supports the SQL language and manages transactions (or most of them).
 
-3.  __Define what is "table" in database terms.__
+__3. Define what is "table" in database terms.__
 
 Database tables consist of data, arranged in rows and columns. All rows have the same structure. Columns have name and type (number, string, date, image, or other). Each row is identified by one or more values appearing in a particular column subset.
 
-4.  __Explain the difference between a primary and a foreign key.__
+__4. Explain the difference between a primary and a foreign key.__
 
 Primary key is a column of the table that uniquely identifies its rows (usually it is a number). The foreign key is an identifier of a record located in another table (usually its primary key).
 
-5.  __Explain the different kinds of relationships between tables in relational databases.__
+__5. Explain the different kinds of relationships between tables in relational databases.__
 
  - One-to-many (or many-to-one) - a single record in the first table has many corresponding records in the second table.
  - Many-to-many - records in the first table have many corresponding records in the second one and vice versa. Implemented through additional table.
  - One-to-one - a single record in a table corresponds to a single record in the other table. Used to model inheritance between tables.
 
-6.  __When is a certain database schema normalized? What are the advantages of normalized databases?__
+__6. When is a certain database schema normalized? What are the advantages of normalized databases?__
 
 Normalization of the relational schema removes repeating data. The advantages are that by having less data repeated the overall storage space consumed by the database is less and the better performance.
 
-7.  __What are database integrity constraints and when are they used?__
+__7. What are database integrity constraints and when are they used?__
 
 Database integrity constraints are rules that ensure that the data entered in the database is valid (by setting those validations rules in advance). For example we can constrain a name to not be more than 50 symbols. When we try to save incorrect data into the DB we will get an error instead of invalid data.
 
-8.  __Point out the pros and cons of using indexes in a database.__
+__8. Point out the pros and cons of using indexes in a database.__
 
 - pros: 
 Fast search
@@ -50,25 +50,25 @@ Fast search
 Potentially slower writing, due to the necessity of the indexing structure to rearrange from time to time as new data is inserted.
 More disk space.
 
-9.  __What's the main purpose of the SQL language?__
+__9. What's the main purpose of the SQL language?__
 
 SQL is used for manipulation of relational databases. It supports creating, altering, deleting tables and other objects in the database as well as searching, retrieving, inserting, modifying and deleting table data (rows) and many others.
 
-10.  __What are transactions used for? Give an example.__
+__10. What are transactions used for? Give an example.__
 
 Transactions are used to execute several actions as one. We want to execute all the actions and not only half of them. If any of them fails we want to roll-back the effects of the previously executed actions – in other words if 2 of 3 actions execute and the 3rd throws an error, we don’t want to save the changes done by actions 1 and 2. For example when we draw money, we want to change our balance, get the money physically and keep a log for the transactions. If any of these actions fails, we don’t want to lose this money, as the new balance is saved in step 1.
 
-11.  __What is a NoSQL database?__
+__11. What is a NoSQL database?__
 
 NoSQL database uses document-based model. It’s main idea is to be non-relational. It still supports CRUD operations but holds all the relevant information for an entity in a single document, instead of joining several tables to extract this information.
 
-12.  __Explain the classical non-relational data models.__
+__12. Explain the classical non-relational data models.__
 
 Non-relational data models store all the information regarding an entity in a single file – imagine all the details for a person (name, age,  address, town, country etc.) in a single file. This way no joins or lookups in different files are required. In comparison in the relational data model you will have to extract information from each table (names, addresses, towns, countries etc.) and join them, to acquire all the information for that person.
 
-13.  __Give few examples of NoSQL databases and their pros and cons.__
+__13. Give few examples of NoSQL databases and their pros and cons.__
 
- * MongoDB
+* MongoDB
 	* pros
 		* Sharding and Load-Balancing - sharding is the process of storing data records across multiple machines and is MongoDB's approach to meeting the demands of data growth.
 		* Speed - this advantage only exists when your data is truly a document. When your data is essentially emulating a relational model, your code ends up performing many independent queries in order to retrieve a single document and can become much slower than a classic RDBMS.
@@ -80,7 +80,7 @@ Non-relational data models store all the information regarding an entity in a si
 		* Transactions - MongoDB doesn't automatically treat operations as transactions. In order to ensure data integrity upon create/update you have to manually choose to create a transaction, manually verify it, and then manually commit or rollback.
 		* Young Software: Inexperienced User-Base; Still Under Construction; Little Documentation
 
- * Redis
+* Redis
 	* pros:
 		* Speed - Redis is a high performance persistence key value In-memory data store, typically used for  applications where performance and flexibility are more critical than persistence and absolute data integrity .
 	* cons:
