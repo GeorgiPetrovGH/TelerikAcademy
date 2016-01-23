@@ -1,5 +1,3 @@
-# Programming with C# 
-
 ## C# - Part I
 
 1. [Introduction to Programming](https://github.com/GeorgiPetrovGH/TelerikAcademy/tree/master/01.C%23%20part%201/01.IntroToProgramming)
