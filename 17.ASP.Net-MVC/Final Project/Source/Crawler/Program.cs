@@ -12,7 +12,7 @@ namespace Crawler
         public static void Main()
         {
             var db = new ApplicationDbContext();
-            var repo = new DbRepository<JokeCategory>(db);
+            var repo = new DbRepository<Category>(db);
             var categoriesService = new CategoriesService(repo);
 
             var configuration = Configuration.Default.WithDefaultLoader();

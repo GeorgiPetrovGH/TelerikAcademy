@@ -6,7 +6,8 @@
     using Common.Models;
     using System.Data.Entity;
     using System;
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+
+    public class ApplicationDbContext : IdentityDbContext<User>
     {
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -18,9 +19,15 @@
             return new ApplicationDbContext();
         }
 
-        public IDbSet<Joke> Jokes { get; set; }
+        public IDbSet<Place> Places { get; set; }
 
-        public IDbSet<JokeCategory> JokesCategories { get; set; }
+        public IDbSet<Category> Categories { get; set; }
+
+        public IDbSet<Rating> Ratings { get; set; }
+
+        public IDbSet<Comment> Comments { get; set; }
+
+        public IDbSet<Image> Images { get; set; }
 
         public override int SaveChanges()
         {

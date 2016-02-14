@@ -1,26 +1,26 @@
-﻿using MvcTemplate.Data.Models;
-using System.Linq;
-using System;
-using MvcTemplate.Data.Common;
-
-namespace MvcTemplate.Services.Data
+﻿namespace MvcTemplate.Services.Data
 {
+    using MvcTemplate.Data.Models;
+    using System.Linq;
+    using System;
+    using MvcTemplate.Data.Common;
+
     public interface ICategoriesService
     {
-        IQueryable<JokeCategory> GetAll();
+        IQueryable<Category> GetAll();
 
-        JokeCategory EnsureCategory(string name);
+        Category EnsureCategory(string name);
     }
 
     public class CategoriesService : ICategoriesService
     {
-        IDbRepository<JokeCategory> categories;
-        public CategoriesService(IDbRepository<JokeCategory> categories)
+        IDbRepository<Category> categories;
+        public CategoriesService(IDbRepository<Category> categories)
         {
             this.categories = categories;
         }
 
-        public JokeCategory EnsureCategory(string name)
+        public Category EnsureCategory(string name)
         {
             var category = this.categories.All().FirstOrDefault(x => x.Name == name);
             if (category != null)
@@ -28,13 +28,13 @@ namespace MvcTemplate.Services.Data
                 return category;
             }
 
-            category = new JokeCategory() { Name = name };
+            category = new Category() { Name = name };
             this.categories.Add(category);
             this.categories.Save();
             return category;
         }
 
-        public IQueryable<JokeCategory> GetAll()
+        public IQueryable<Category> GetAll()
         {
             return this.categories.All().OrderBy(x => x.Name);
         }

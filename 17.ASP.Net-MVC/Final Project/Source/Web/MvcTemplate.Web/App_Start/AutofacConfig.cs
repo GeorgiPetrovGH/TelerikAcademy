@@ -51,10 +51,7 @@
                 .InstancePerRequest();
             builder.Register(x => new IdentifierProvider())
                 .As<IIdentifierProvider>()
-                .InstancePerRequest();
-
-            var servicesAssembly = Assembly.GetAssembly(typeof(IJokesService));
-            builder.RegisterAssemblyTypes(servicesAssembly).AsImplementedInterfaces();
+                .InstancePerRequest();            
 
             builder.RegisterGeneric(typeof(DbRepository<>))
                 .As(typeof(IDbRepository<>))
