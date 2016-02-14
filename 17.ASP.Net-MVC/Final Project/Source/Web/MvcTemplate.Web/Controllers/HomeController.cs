@@ -6,9 +6,13 @@
     using ViewModels.Home;
     using Infrastructure.Mapping;
     using Services.Data;
+    using Data;
 
     public class HomeController : BaseController
     {
-        
+        public ActionResult Index()
+        {            
+            return this.View();
+        }
     }
 }
