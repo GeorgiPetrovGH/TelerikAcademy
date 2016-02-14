@@ -27,13 +27,9 @@
         [Required]
         [MinLength(2)]
         [MaxLength(100)]
-        public string LastName { get; set; }
+        public string LastName { get; set; } 
         
-        public int ImageId { get; set; }
-
-        [ForeignKey("ImageId")]
-        public virtual Image Image { get; set; }
-
+        public string ImageUrl { get; set; }
 
         public virtual ICollection<Place> Places
         {
