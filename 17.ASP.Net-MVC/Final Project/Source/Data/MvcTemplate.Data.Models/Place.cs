@@ -9,11 +9,13 @@
     {
         private ICollection<Rating> ratings;
         private ICollection<Comment> comments;
+        private ICollection<Image> images;
 
         public Place()
         {
             this.ratings = new HashSet<Rating>();
             this.comments = new HashSet<Comment>();
+            this.images = new HashSet<Image>();
         }
 
         [Required]
@@ -48,6 +50,12 @@
         {
             get { return this.comments; }
             set { this.comments = value; }
+        }
+
+        public virtual ICollection<Image> Images
+        {
+            get { return this.images; }
+            set { this.images = value; }
         }
     }
 }
