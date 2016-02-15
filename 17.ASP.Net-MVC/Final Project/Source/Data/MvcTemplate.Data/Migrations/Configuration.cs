@@ -13,13 +13,19 @@ namespace MvcTemplate.Data.Migrations
         public Configuration()
         {
             this.AutomaticMigrationsEnabled = true;
-            this.AutomaticMigrationDataLossAllowed = false;
+            this.AutomaticMigrationDataLossAllowed = true;
             this.seeder = new SeedData();
         }
 
         protected override void Seed(ApplicationDbContext context)
         {
+            if (context.Categories.Any())
+            {
+                return;
+            }
+
             this.seeder.SeedRoles(context);
+            this.seeder.SeedAdmin(context);
 
             context.SaveChanges();
         }

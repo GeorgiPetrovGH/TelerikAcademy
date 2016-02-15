@@ -11,7 +11,10 @@
     public class HomeController : BaseController
     {
         public ActionResult Index()
-        {            
+        {
+            var db = new ApplicationDbContext();
+            var usersCount = db.Users.Count();
+
             return this.View();
         }
     }
