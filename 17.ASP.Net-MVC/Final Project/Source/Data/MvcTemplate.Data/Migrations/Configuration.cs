@@ -19,7 +19,7 @@ namespace MvcTemplate.Data.Migrations
 
         protected override void Seed(ApplicationDbContext context)
         {
-            if (context.Categories.Any())
+            if (context.Users.Any())
             {
                 return;
             }
