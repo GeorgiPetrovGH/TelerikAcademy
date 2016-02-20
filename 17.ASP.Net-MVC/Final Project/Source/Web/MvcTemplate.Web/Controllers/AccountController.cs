@@ -418,7 +418,7 @@
         public ActionResult LogOff()
         {
             this.AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return this.RedirectToAction("Index", "Home");
+            return this.RedirectToAction("Index", "Home", new { area = string.Empty });
         }
 
         // GET: /Account/ExternalLoginFailure

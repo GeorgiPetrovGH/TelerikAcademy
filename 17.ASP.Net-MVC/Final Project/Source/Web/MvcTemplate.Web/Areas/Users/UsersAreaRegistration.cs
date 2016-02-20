@@ -16,7 +16,7 @@
         {
             context.MapRoute(
                 "Users_default",
-                "Users/{controller}/{action}/{id}",
+                "{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional });
         }
     }
