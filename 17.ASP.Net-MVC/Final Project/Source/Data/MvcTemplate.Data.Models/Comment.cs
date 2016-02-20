@@ -1,8 +1,8 @@
 ﻿namespace MvcTemplate.Data.Models
 {
-    using Common.Models;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using Common.Models;
 
     public class Comment : BaseModel<int>
     {

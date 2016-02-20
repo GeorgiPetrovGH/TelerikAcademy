@@ -1,9 +1,10 @@
 ﻿namespace MvcTemplate.Data.Models
-{
-    using MvcTemplate.Data.Common.Models;
+{ 
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+
+    using MvcTemplate.Data.Common.Models;
 
     public class Place : BaseModel<int>
     {

@@ -1,8 +1,8 @@
-﻿using MvcTemplate.Services.Web;
-using System.Web.Mvc;
-
-namespace MvcTemplate.Web.Controllers
+﻿namespace MvcTemplate.Web.Controllers
 {
+    using System.Web.Mvc;
+    using MvcTemplate.Services.Web;
+
     public abstract class BaseController : Controller
     {
         public ICacheService Cache { get; set; }

@@ -1,23 +1,19 @@
 ﻿namespace MvcTemplate.Data
 {
-    using MvcTemplate.Data.Models;
-    using Microsoft.AspNet.Identity.EntityFramework;
-    using System.Linq;
-    using Common.Models;
-    using System.Data.Entity;
     using System;
+    using System.Data.Entity;
+    using System.Linq;
+
+    using Common.Models;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using MvcTemplate.Data.Models;
 
     public class ApplicationDbContext : IdentityDbContext<User>
     {
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
-        }
-
-        public static ApplicationDbContext Create()
-        {
-            return new ApplicationDbContext();
-        }
+        }        
 
         public IDbSet<Place> Places { get; set; }
 
@@ -28,6 +24,11 @@
         public IDbSet<Comment> Comments { get; set; }
 
         public IDbSet<Image> Images { get; set; }
+
+        public static ApplicationDbContext Create()
+        {
+            return new ApplicationDbContext();
+        }
 
         public override int SaveChanges()
         {

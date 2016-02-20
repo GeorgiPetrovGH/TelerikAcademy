@@ -1,9 +1,9 @@
 ﻿namespace MvcTemplate.Services.Data
-{
-    using MvcTemplate.Data.Models;
+{ 
     using System.Linq;
-    using System;
+    
     using MvcTemplate.Data.Common;
+    using MvcTemplate.Data.Models;
 
     public interface ICategoriesService
     {
@@ -14,7 +14,8 @@
 
     public class CategoriesService : ICategoriesService
     {
-        IDbRepository<Category> categories;
+        private IDbRepository<Category> categories;
+
         public CategoriesService(IDbRepository<Category> categories)
         {
             this.categories = categories;

@@ -1,12 +1,12 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MvcTemplate.Services.Web.Tests
+﻿namespace MvcTemplate.Services.Web.Tests
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using NUnit.Framework;
+
     [TestFixture]
     public class IdentifierProviderTests
     {

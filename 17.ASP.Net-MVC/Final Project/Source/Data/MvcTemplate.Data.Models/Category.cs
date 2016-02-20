@@ -1,7 +1,7 @@
 ﻿namespace MvcTemplate.Data.Models
 {
-    using MvcTemplate.Data.Common.Models;
     using System.Collections.Generic;
+    using MvcTemplate.Data.Common.Models;
 
     public class Category : BaseModel<int>
     {

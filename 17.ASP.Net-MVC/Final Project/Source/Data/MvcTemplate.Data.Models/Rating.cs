@@ -1,12 +1,13 @@
 ﻿namespace MvcTemplate.Data.Models
 {
-    using Common.Models;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
+    using Common.Models;
+
     public class Rating : BaseModel<int>
     {
-        [Range(1,5)]
+        [Range(1, 5)]
         public int Value { get; set; }
 
         public string CreatorId { get; set; }

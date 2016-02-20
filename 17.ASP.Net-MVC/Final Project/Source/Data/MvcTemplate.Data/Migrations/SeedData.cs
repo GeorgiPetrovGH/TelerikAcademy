@@ -1,10 +1,11 @@
 ﻿namespace MvcTemplate.Data.Migrations
 {
-    using Microsoft.AspNet.Identity;
-    using Microsoft.AspNet.Identity.EntityFramework;
-    using MvcTemplate.Common;
-    using Models;
     using System.Collections.Generic;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;    
+
+    using Models;
+    using MvcTemplate.Common;
 
     public class SeedData
     {

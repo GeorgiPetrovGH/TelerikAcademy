@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
-
 using Owin;
 
 [assembly: OwinStartupAttribute(typeof(MvcTemplate.Web.Startup))]
+
 namespace MvcTemplate.Web
 {
     public partial class Startup

@@ -1,11 +1,12 @@
-﻿using System;
-using System.Text;
-
-namespace MvcTemplate.Services.Web
+﻿namespace MvcTemplate.Services.Web
 {
+    using System;
+    using System.Text;
+
     public class IdentifierProvider : IIdentifierProvider
     {
         private const string Salt = ".12312313123";
+
         public int DecodeId(string urlId)
         {
             var base64EncodedBytes = 
