@@ -43,6 +43,26 @@
             context.SaveChanges();
         }
 
+        public void SeedUser(ApplicationDbContext context)
+        {
+            var userStore = new UserStore<User>(context);
+            var userManager = new UserManager<User>(userStore);
+
+            var user = new User()
+            {
+                Email = "user1@site.com",
+                UserName = "user1@site.com",
+                FirstName = "User1",
+                LastName = "User1"
+            };
+
+            userManager.Create(user, GlobalConstants.UserPassword);
+            userManager.SetLockoutEnabled(user.Id, false);
+            userManager.AddToRole(user.Id, GlobalConstants.UserRole);
+
+            context.SaveChanges();
+        }
+
         public void SeedCategories(ApplicationDbContext context)
         {
             var categories = new List<Category>
