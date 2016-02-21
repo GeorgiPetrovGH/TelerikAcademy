@@ -198,9 +198,9 @@
     <Compile Include="App_Start\SmsService.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
-    <Compile Include="Areas\Users\Controllers\PlacesController.cs" />
-    <Compile Include="Areas\Users\Controllers\UsersController.cs" />
-    <Compile Include="Areas\Users\UsersAreaRegistration.cs" />
+    <Compile Include="Areas\Private\PrivateAreaRegistration.cs" />
+    <Compile Include="Areas\Private\Controllers\PlacesController.cs" />
+    <Compile Include="Areas\Private\Controllers\UsersController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -251,9 +251,9 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Areas\Administration\Views\web.config" />
-    <Content Include="Areas\Users\Views\web.config" />
-    <Content Include="Areas\Users\Views\Users\Info.cshtml" />
-    <Content Include="Areas\Users\Views\Places\All.cshtml" />
+    <Content Include="Areas\Private\Views\Users\Info.cshtml" />
+    <Content Include="Areas\Private\Views\Places\All.cshtml" />
+    <Content Include="Areas\Private\Views\web.config" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
@@ -271,7 +271,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Areas\Users\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Private\Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -304,8 +304,8 @@
     <Folder Include="Areas\Administration\Controllers\" />
     <Folder Include="Areas\Administration\Models\" />
     <Folder Include="Areas\Administration\Views\Shared\" />
-    <Folder Include="Areas\Users\Models\" />
-    <Folder Include="Areas\Users\Views\Shared\" />
+    <Folder Include="Areas\Private\Models\" />
+    <Folder Include="Areas\Private\Views\Shared\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
