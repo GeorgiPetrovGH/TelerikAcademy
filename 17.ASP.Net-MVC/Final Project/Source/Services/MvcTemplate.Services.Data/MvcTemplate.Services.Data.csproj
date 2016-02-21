@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ICategoriesService.cs" />
+    <Compile Include="IPlacesServices.cs" />
+    <Compile Include="PlacesServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

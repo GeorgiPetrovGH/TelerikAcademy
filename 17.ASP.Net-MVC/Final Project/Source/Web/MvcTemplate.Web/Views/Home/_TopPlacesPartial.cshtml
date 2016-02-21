@@ -1,7 +1,18 @@
-﻿@{
+﻿@model MvcTemplate.Web.ViewModels.Home.IndexViewModel
+@{
     ViewBag.Title = "Partial Home Page Statistics";
 }
 
 <div class="row">
-    <h2>Here are top 3 places</h2>
+    @foreach (var place in Model.Places)
+    {
+        <div class="col-md-3">
+            <div class="row">
+                @place.Name
+            </div>
+            <div class="row">
+                @place.Description
+            </div>
+        </div>
+    }
 </div>

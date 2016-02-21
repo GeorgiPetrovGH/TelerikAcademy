@@ -4,5 +4,6 @@
 
     public class IndexViewModel
     {
+        public ICollection<IndexPlaceViewModel> Places { get; set; }
     }
 }

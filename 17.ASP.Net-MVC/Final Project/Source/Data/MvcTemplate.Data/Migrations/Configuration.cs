@@ -27,6 +27,7 @@ namespace MvcTemplate.Data.Migrations
             this.seeder.SeedRoles(context);
             this.seeder.SeedAdmin(context);
             this.seeder.SeedUser(context);
+            this.seeder.SeedCategories(context);
 
             var users = context.Users.Take(5).ToList();
             var categories = context.Categories.ToList();
