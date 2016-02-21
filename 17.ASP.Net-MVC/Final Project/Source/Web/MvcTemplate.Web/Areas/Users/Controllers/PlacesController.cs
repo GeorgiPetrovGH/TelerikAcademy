@@ -4,7 +4,6 @@
 
     public class PlacesController : Controller
     {
-        // GET: Users/Places
         public ActionResult All()
         {
             return this.View();
