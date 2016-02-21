@@ -28,6 +28,13 @@ namespace MvcTemplate.Data.Migrations
             this.seeder.SeedAdmin(context);
             this.seeder.SeedUser(context);
 
+            var users = context.Users.Take(5).ToList();
+            var categories = context.Categories.ToList();
+
+            this.seeder.SeedSinglePlace(context, "The Little things", "Nice cosy place", categories[10], users[0]);
+            this.seeder.SeedSinglePlace(context, "Sun and Moon", "Nice cosy place", categories[4], users[0]);
+            this.seeder.SeedSinglePlace(context, "Mimas", "Fuck that place", categories[7], users[0]);
+
             context.SaveChanges();
         }
     }

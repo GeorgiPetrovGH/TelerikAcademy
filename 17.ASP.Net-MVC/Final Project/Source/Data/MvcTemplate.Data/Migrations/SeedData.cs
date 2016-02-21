@@ -70,25 +70,39 @@
                 new Category { Name = "Pizza" },
                 new Category { Name = "Spaghetti" },
                 new Category { Name = "Pasta" },
-                new Category { Name = "Burgers" },
+                new Category { Name = "Burger" },
                 new Category { Name = "Gyros" },
                 new Category { Name = "Doner Kebab" },
                 new Category { Name = "Chinese" },
                 new Category { Name = "Indian" },
                 new Category { Name = "Junk" },
                 new Category { Name = "Vegan" },
-                new Category { Name = "Vegetarian" },
-                new Category { Name = "Other" },
+                new Category { Name = "Vegetarian" },                
                 new Category { Name = "Seafood" },
                 new Category { Name = "Fish" },
                 new Category { Name = "French" },
                 new Category { Name = "Italian" },
                 new Category { Name = "Bulgarian" },
                 new Category { Name = "Turkish" },
+                new Category { Name = "Other" },
             };
 
             categories.ForEach(x => context.Categories.Add(x));
 
+            context.SaveChanges();
+        }
+
+        public void SeedSinglePlace(ApplicationDbContext context, string name, string description, Category category, User user)
+        {
+            var place = new Place
+            {
+                Name =name,
+                Description = description,
+                CreatorId = user.Id,
+                CategoryId = category.Id
+            };
+
+            context.Places.Add(place);
             context.SaveChanges();
         }
     }
