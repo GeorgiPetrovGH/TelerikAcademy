@@ -111,15 +111,15 @@
 
             if (model.UploadedImage != null)
             {
-                place.Images.Add(this.GetUploadedImage(model as IHaveImage, place.Id));
+                place.Images.Add(this.GetUploadedImage(model as IHaveImage));
             }
 
             this.places.CreatePlace(place);
 
-            return this.Redirect("/Private/Details/" + place.Id);
+            return this.Redirect("/Private/Places/Details/" + place.Id);
         }
 
-        public Image GetUploadedImage(IHaveImage model, int placeId)
+        public Image GetUploadedImage(IHaveImage model)
         {
             using (var memory = new MemoryStream())
             {
@@ -131,11 +131,8 @@
                 var image = new Image
                 {
                     Content = content,
-                    FileExtension = fileExtension,
-                    PlaceId = placeId
+                    FileExtension = fileExtension
                 };
-
-                this.images.CreateImage(image);
 
                 return image;
             }

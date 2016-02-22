@@ -9,8 +9,9 @@
     using MvcTemplate.Data.Models;
     using MvcTemplate.Web.Infrastructure.Mapping;
     using ViewModels.Categories;
+    using ViewModels.Contracts;
 
-    public class PlaceInputModel : IMapFrom<Place>
+    public class PlaceInputModel : IMapFrom<Place>, IHaveImage
     {
         public string Name { get; set; }
 
