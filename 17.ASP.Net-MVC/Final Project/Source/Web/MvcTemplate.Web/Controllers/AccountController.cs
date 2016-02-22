@@ -11,6 +11,7 @@
 
     using MvcTemplate.Data.Models;
     using MvcTemplate.Web.ViewModels.Account;
+    using Common;
 
     [Authorize]
     public class AccountController : BaseController
@@ -172,6 +173,7 @@
             {
                 var user = new User { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName };
                 var result = await this.UserManager.CreateAsync(user, model.Password);
+                result = await this.UserManager.AddToRoleAsync(user.Id, GlobalConstants.UserRole);
                 if (result.Succeeded)
                 {
                     await this.SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
