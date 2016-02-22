@@ -2,10 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     using AutoMapper;
     using Comments;
     using Data.Models;
+    using Images;
     using Infrastructure.Mapping;
 
     public class PlaceDetailsViewModel : IMapFrom<Place>, IHaveCustomMappings
@@ -27,6 +27,8 @@
         public int PagesCount { get; set; }
 
         public ICollection<CommentViewModel> Comments { get; set; }
+
+        public ICollection<ImageViewModel> Images { get; set; }
 
         public void CreateMappings(IMapperConfiguration configuration)
         {

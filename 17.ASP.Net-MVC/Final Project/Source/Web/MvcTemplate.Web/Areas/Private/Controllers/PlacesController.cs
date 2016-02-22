@@ -10,6 +10,7 @@
     using Microsoft.AspNet.Identity;
     using Models;
     using Models.Comments;
+    using Models.Images;
     using Models.Places;
     using Services.Data;
     using ViewModels.Categories;
@@ -49,7 +50,7 @@
 
             if (viewModel.Search == null)
             {
-                viewModel.Search = " ";
+                viewModel.Search = string.Empty;
             }
 
             var itemsCount = this.places.GetAllPlaces().Count(x => x.Name.Contains(viewModel.Search));
@@ -69,10 +70,12 @@
         {
             var place = this.places.GetPlaceById(id);
             var comments = this.comments.GetCommentsByPlaceId(id, page).To<CommentViewModel>().ToList();
+            var images = this.images.GetImagesByPlaceId(place.Id).To<ImageViewModel>().ToList();
 
             var viewModel = AutoMapperConfig.Configuration.CreateMapper().Map<PlaceDetailsViewModel>(place);
             viewModel.Comments = comments;
             viewModel.PagesCount = this.comments.GetPagesByPlaceId(id);
+            viewModel.Images = images;
 
             return this.View(viewModel);
         }

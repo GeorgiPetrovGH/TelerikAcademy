@@ -199,8 +199,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
     <Compile Include="Areas\Private\Controllers\CommentsController.cs" />
+    <Compile Include="Areas\Private\Controllers\ImagesController.cs" />
     <Compile Include="Areas\Private\Models\Comments\CommentInputModel.cs" />
     <Compile Include="Areas\Private\Models\Comments\CommentViewModel.cs" />
+    <Compile Include="Areas\Private\Models\Images\ImageViewModel.cs" />
     <Compile Include="Areas\Private\Models\Places\PlaceDetailsViewModel.cs" />
     <Compile Include="Areas\Private\Models\Places\PlaceInputModel.cs" />
     <Compile Include="Areas\Private\Models\Places\PlacesListViewModel.cs" />

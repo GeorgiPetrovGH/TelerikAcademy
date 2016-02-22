@@ -38,7 +38,7 @@
         {
             if (search == null)
             {
-                search = " ";
+                search = string.Empty;
             }
 
             switch (orderby)

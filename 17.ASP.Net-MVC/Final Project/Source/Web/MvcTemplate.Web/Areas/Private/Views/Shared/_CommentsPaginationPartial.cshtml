@@ -18,7 +18,7 @@
                     <li><a href="@Url.Action("Details", "Places", new { area = "Private", id = placeId, page = i })">@i</a></li>
                 }
             }
-            <li><a href="@Url.Action("Details", "Places", new { area = "Private", id = placeId, page = (currentPage == Model ? Model : currentPage + 1)})" aria-label="Next"><span aria-hidden="true">&laquo;</span></a></li>
+            <li><a href="@Url.Action("Details", "Places", new { area = "Private", id = placeId, page = (currentPage == Model ? Model : currentPage + 1)})" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
         </ul>
     </nav>
 }

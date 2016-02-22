@@ -5,14 +5,21 @@
 }
 
 <h2>Details</h2>
-
-<div>
+<div  class="row">
+    @foreach(var image in Model.Images)
+    {
+        <div class="col-md-4">
+            <img src="@(image != null ? @Url.Action("GetImageById", "Images", new { id = image.Id, area = "Private" }) : Url.Content("~/Images/default.png"))" />
+        </div>
+    }
+</div>
+<div class="row">
     @Html.Partial("_CommentAddPartial", new CommentInputModel())
 </div>
-<div>
+<div class="row">
     @Html.Partial("_CommentsListPartial", Model.Comments)
 </div>
-<div>
+<div class="row">
     @Html.Partial("_CommentsPaginationPartial", Model.PagesCount)
 </div>
 
