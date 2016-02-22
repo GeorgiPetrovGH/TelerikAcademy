@@ -198,6 +198,10 @@
     <Compile Include="App_Start\SmsService.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Areas\Private\Controllers\CommentsController.cs" />
+    <Compile Include="Areas\Private\Models\Comments\CommentInputModel.cs" />
+    <Compile Include="Areas\Private\Models\Comments\CommentViewModel.cs" />
+    <Compile Include="Areas\Private\Models\Places\PlaceDetailsViewModel.cs" />
     <Compile Include="Areas\Private\Models\Places\PlaceInputModel.cs" />
     <Compile Include="Areas\Private\Models\Places\PlacesListViewModel.cs" />
     <Compile Include="Areas\Private\Models\Places\PlaceViewModel.cs" />
@@ -261,6 +265,11 @@
     <Content Include="Areas\Private\Views\web.config" />
     <Content Include="Areas\Private\Views\Places\Details.cshtml" />
     <Content Include="Areas\Private\Views\Places\Create.cshtml" />
+    <Content Include="Areas\Private\Views\Shared\_CommentAddPartial.cshtml" />
+    <Content Include="Areas\Private\Views\Shared\_CommentsListPartial.cshtml" />
+    <Content Include="Areas\Private\Views\Shared\_CommentsPaginationPartial.cshtml" />
+    <Content Include="Areas\Private\Views\Shared\_SearchPartial.cshtml" />
+    <Content Include="Areas\Private\Views\Shared\_SortPartial.cshtml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
@@ -313,7 +322,7 @@
     <Folder Include="Areas\Administration\Controllers\" />
     <Folder Include="Areas\Administration\Models\" />
     <Folder Include="Areas\Administration\Views\Shared\" />
-    <Folder Include="Areas\Private\Views\Shared\" />
+    <Folder Include="Areas\Private\Views\Comments\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Shared\DisplayTemplates\" />
     <Folder Include="Views\Shared\EditorTemplates\" />
@@ -332,6 +341,10 @@
     </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\MvcTemplate.Common\MvcTemplate.Common.csproj">
+      <Project>{f95b36b0-7c4f-409c-9c34-65d3d64c9207}</Project>
+      <Name>MvcTemplate.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Data\MvcTemplate.Data.Common\MvcTemplate.Data.Common.csproj">
       <Project>{edfe3c57-ef5b-4636-9ecc-d0baca6b6379}</Project>
       <Name>MvcTemplate.Data.Common</Name>

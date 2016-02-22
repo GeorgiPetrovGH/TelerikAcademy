@@ -32,8 +32,8 @@
             {
                 Email = "admin@site.com",
                 UserName = "admin@site.com",
-                FirstName = "Admin",
-                LastName = "Admin"
+                FirstName = "Admin12",
+                LastName = "Admin12"
             };
 
             userManager.Create(admin, GlobalConstants.AdminPassword);
@@ -52,8 +52,8 @@
             {
                 Email = "user1@site.com",
                 UserName = "user1@site.com",
-                FirstName = "User1",
-                LastName = "User1"
+                FirstName = "User12",
+                LastName = "User12"
             };
 
             userManager.Create(user, GlobalConstants.UserPassword);
