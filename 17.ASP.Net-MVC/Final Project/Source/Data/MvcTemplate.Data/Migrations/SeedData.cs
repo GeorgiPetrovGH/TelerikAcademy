@@ -2,13 +2,18 @@
 {
     using System.Collections.Generic;
     using Microsoft.AspNet.Identity;
-    using Microsoft.AspNet.Identity.EntityFramework;    
+    using Microsoft.AspNet.Identity.EntityFramework;
 
     using Models;
     using MvcTemplate.Common;
+    using System.IO;
+    using System.Reflection;
+    using System.Linq;
 
     public class SeedData
     {
+        public const string DefaultImagePath = "../../Images/default.jpg";
+
         public void SeedRoles(ApplicationDbContext context)
         {
             var roleStore = new RoleStore<IdentityRole>(context);
@@ -94,16 +99,33 @@
 
         public void SeedSinglePlace(ApplicationDbContext context, string name, string description, Category category, User user)
         {
+            var image = this.GetDefaultImage(DefaultImagePath);
+
             var place = new Place
             {
-                Name =name,
+                Name = name,
                 Description = description,
                 CreatorId = user.Id,
-                CategoryId = category.Id
+                CategoryId = category.Id                
             };
+
+            place.Images.Add(image);
 
             context.Places.Add(place);
             context.SaveChanges();
+        }
+
+        public Image GetDefaultImage(string path)
+        {
+            var directory = AssemblyHelpers.GetDirectoryForAssembyl(Assembly.GetExecutingAssembly());
+            var file = File.ReadAllBytes(directory + path);
+            var image = new Image
+            {
+                Content = file,
+                FileExtension = path.Split('.').Last()
+            };
+
+            return image;
         }
     }
 }

@@ -1,0 +1,18 @@
+﻿@using MvcTemplate.Web.Areas.Private.Models.Comments
+@model MvcTemplate.Web.Areas.Private.Models.Places.PlaceDetailsViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    @Html.Partial("_CommentAddPartial", new CommentInputModel())
+</div>
+<div>
+    @Html.Partial("_CommentsListPartial", Model.Comments)
+</div>
+<div>
+    @Html.Partial("_CommentsPaginationPartial", Model.PagesCount)
+</div>
+

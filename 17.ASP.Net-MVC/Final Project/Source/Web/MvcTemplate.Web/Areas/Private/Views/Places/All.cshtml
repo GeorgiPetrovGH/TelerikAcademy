@@ -1,0 +1,68 @@
+﻿@using MvcTemplate.Common
+@model MvcTemplate.Web.Areas.Private.Models.PlacesListViewModel
+@{
+    ViewBag.Title = "All";
+}
+
+<div class="row">
+    <div class="pull-left">
+        @Html.ActionLink("Create new place", "Create", "Places", new { area = "Private" }, null)
+    </div>
+    <div class="pull-right">
+        @Html.Partial("_SearchPartial", Model)
+    </div>    
+</div>
+<div class="row">
+    @Html.Partial("_SortPartial", Model)
+</div>
+<div class="row">
+    @foreach (var place in Model.Places)
+    {        
+        <div class="row">
+            <div class="row">
+                <h4>
+                    <a href="/Private/Places/Details/@place.Id">@place.Name</a>
+                </h4>
+            </div>
+            <div class="row">
+                <p>@place.Description</p>
+            </div>
+            <div class="row">
+                @place.CategoryId                
+            </div>
+        </div>
+    }
+</div>
+<nav>
+    <ul class="pagination">
+        @if (Model.Page > 1)
+        {
+            <li>
+                <a href="/Private/Places/All?page=@(Model.Page - 1)&orderBy=@Model.OrderBy&search=@Model.Search" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+        }
+
+        @for (int i = 1; i < Model.TotalPages; i++)
+        {
+            var className = string.Empty;
+            if (Model.Page == i)
+            {
+                className = "active";
+            }
+            <li class="@className">
+                <a href="/Private/Places/All?page=@i&orderBy=@Model.OrderBy&search=@Model.Search">@i</a>
+            </li>
+        }
+        @if (Model.Page < Model.TotalPages)
+        {
+            <li>
+                <a href="/Private/Places/All?page=@(Model.Page + 1)&orderBy=@Model.OrderBy&search=@Model.Search" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        }
+    </ul>
+</nav>
+

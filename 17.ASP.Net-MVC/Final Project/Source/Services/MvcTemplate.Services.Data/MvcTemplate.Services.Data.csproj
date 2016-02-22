@@ -44,6 +44,8 @@
     <Compile Include="CommentsServices.cs" />
     <Compile Include="ICategoriesServices.cs" />
     <Compile Include="ICommentsServices.cs" />
+    <Compile Include="IImagesServices.cs" />
+    <Compile Include="ImagesServices.cs" />
     <Compile Include="IPlacesServices.cs" />
     <Compile Include="PlacesServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
