@@ -273,6 +273,7 @@
     <Content Include="Areas\Private\Views\Shared\_CommentsPaginationPartial.cshtml" />
     <Content Include="Areas\Private\Views\Shared\_SearchPartial.cshtml" />
     <Content Include="Areas\Private\Views\Shared\_SortPartial.cshtml" />
+    <Content Include="Areas\Private\Views\Shared\_CreatePlacePartial.cshtml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
