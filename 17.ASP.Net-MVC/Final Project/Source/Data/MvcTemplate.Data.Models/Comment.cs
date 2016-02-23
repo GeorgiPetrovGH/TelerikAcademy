@@ -9,6 +9,11 @@
     public class Comment : BaseModel<int>
     {
         [Required]
+        [MinLength(GlobalConstants.CommentNameMinLength)]
+        [MaxLength(GlobalConstants.CommentNameMaxLength)]
+        public string Name { get; set; }
+
+        [Required]
         [MinLength(GlobalConstants.CommentTextMinLength)]
         [MaxLength(GlobalConstants.CommentTextMaxLength)]
         public string Text { get; set; }

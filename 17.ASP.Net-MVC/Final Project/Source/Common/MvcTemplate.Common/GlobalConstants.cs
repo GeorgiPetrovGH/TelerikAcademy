@@ -11,10 +11,12 @@
         public const int CategoryNameMaxLength = 100;
         public const int CommentTextMinLength = 3;
         public const int CommentTextMaxLength = 100;
+        public const int CommentNameMinLength = 3;
+        public const int CommentNameMaxLength = 100;
         public const int PlaceNameMinLength = 2;
         public const int PlaceNameMaxLength = 100;
         public const int PlaceDescriptionMinLength = 10;
-        public const int PlaceDescriptionMaxLength = 200;
+        public const int PlaceDescriptionMaxLength = 500;
         public const int RatingMinValue = 1;
         public const int RatingMaxValue = 5;
         public const int UserFirstNameMinLength = 2;

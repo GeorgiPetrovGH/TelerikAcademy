@@ -1,18 +1,19 @@
 ﻿namespace MvcTemplate.Data.Migrations
 {
-    using System.Collections.Generic;
-    using Microsoft.AspNet.Identity;
-    using Microsoft.AspNet.Identity.EntityFramework;
-
-    using Models;
-    using MvcTemplate.Common;
     using System.IO;
     using System.Reflection;
     using System.Linq;
+    using System;
+    using System.Collections.Generic;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using Models;
+    using MvcTemplate.Common;
+    
 
     public class SeedData
     {
-        public const string DefaultImagePath = "../../Images/default.jpg";
+        public static Random Rand = new Random();
 
         public void SeedRoles(ApplicationDbContext context)
         {
@@ -57,8 +58,8 @@
             {
                 Email = "user1@site.com",
                 UserName = "user1@site.com",
-                FirstName = "User12",
-                LastName = "User12"
+                FirstName = "User1",
+                LastName = "User1"
             };
 
             userManager.Create(user, GlobalConstants.UserPassword);
@@ -77,10 +78,10 @@
                 new Category { Name = "Pasta" },
                 new Category { Name = "Burger" },
                 new Category { Name = "Gyros" },
-                new Category { Name = "Doner Kebab" },
-                new Category { Name = "Chinese" },
-                new Category { Name = "Indian" },
+                new Category { Name = "Falafel" },
+                new Category { Name = "Doner Kebab" },                
                 new Category { Name = "Junk" },
+                new Category { Name = "Healthy" },
                 new Category { Name = "Vegan" },
                 new Category { Name = "Vegetarian" },                
                 new Category { Name = "Seafood" },
@@ -89,6 +90,8 @@
                 new Category { Name = "Italian" },
                 new Category { Name = "Bulgarian" },
                 new Category { Name = "Turkish" },
+                new Category { Name = "Chinese" },
+                new Category { Name = "Indian" },
                 new Category { Name = "Other" },
             };
 
@@ -97,10 +100,8 @@
             context.SaveChanges();
         }
 
-        public void SeedSinglePlace(ApplicationDbContext context, string name, string description, Category category, User user)
+        public void SeedSinglePlace(ApplicationDbContext context, string name, string description, Category category, User user, string imagePath)
         {
-            var image = this.GetDefaultImage(DefaultImagePath);
-
             var place = new Place
             {
                 Name = name,
@@ -109,10 +110,43 @@
                 CategoryId = category.Id                
             };
 
+            var image = this.GetDefaultImage(imagePath);
             place.Images.Add(image);
+
+            this.SeedRandomRating(place, user);
+            this.SeedRandomComments(place, user);
 
             context.Places.Add(place);
             context.SaveChanges();
+        }
+
+        public void SeedRandomRating(Place place, User user)
+        {
+            for (var i = 1; i <= 50; i++)
+            {
+                var rating = new Rating
+                {
+                    Value = Rand.Next(1, 6),
+                    CreatorId = user.Id
+                };
+
+                place.Ratings.Add(rating);
+            }
+        }
+
+        public void SeedRandomComments(Place place, User user)
+        {
+            for (var i = 1; i <= 10; i++)
+            {
+                var comment = new Comment
+                {
+                    Name = "This is a random comment name",
+                    Text = "This is a random comment text(" + i + ")",
+                    CreatorId = user.Id
+                };
+
+                place.Comments.Add(comment);
+            }
         }
 
         public Image GetDefaultImage(string path)
