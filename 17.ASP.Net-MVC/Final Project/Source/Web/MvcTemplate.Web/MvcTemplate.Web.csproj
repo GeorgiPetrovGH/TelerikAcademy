@@ -328,6 +328,7 @@
     <Folder Include="Areas\Administration\Views\Shared\" />
     <Folder Include="Areas\Private\Views\Comments\" />
     <Folder Include="Images\" />
+    <Folder Include="Libraries\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Shared\DisplayTemplates\" />
   </ItemGroup>
