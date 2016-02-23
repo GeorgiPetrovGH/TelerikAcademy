@@ -16,6 +16,7 @@
     using ViewModels.Categories;
     using ViewModels.Contracts;
 
+    [Authorize]
     public class PlacesController : Controller
     {
         private const int ItemsPerPage = 10;
