@@ -4,10 +4,12 @@
     using System.ComponentModel.DataAnnotations.Schema;
 
     using Common.Models;
+    using MvcTemplate.Common;
 
     public class Rating : BaseModel<int>
-    {
-        [Range(1, 5)]
+    {   
+        [Required]
+        [Range(GlobalConstants.RatingMinValue, GlobalConstants.RatingMaxValue)]
         public int Value { get; set; }
 
         public string CreatorId { get; set; }

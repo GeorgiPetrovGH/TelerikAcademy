@@ -4,14 +4,12 @@
     using System.Threading.Tasks;
     using System.Web;
     using System.Web.Mvc;
-
+    using Common;
+    using Data.Models;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin.Security;
-
-    using MvcTemplate.Data.Models;
-    using MvcTemplate.Web.ViewModels.Account;
-    using Common;
+    using ViewModels.Account;
 
     [Authorize]
     public class AccountController : BaseController

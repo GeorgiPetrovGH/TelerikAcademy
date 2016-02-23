@@ -1,15 +1,13 @@
 ﻿namespace MvcTemplate.Web.Areas.Private.Controllers
 {
     using System.Web.Mvc;
-    using Models.Comments;
     using Data.Models;
     using Microsoft.AspNet.Identity;
+    using Models.Comments;
     using Services.Data;
-    using System;
 
     public class CommentsController : Controller
     {
-
         private readonly ICommentsServices comments;
 
         public CommentsController(ICommentsServices comments)

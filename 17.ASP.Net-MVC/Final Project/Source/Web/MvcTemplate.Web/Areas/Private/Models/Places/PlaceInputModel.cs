@@ -24,7 +24,6 @@
 
         public HttpPostedFileBase UploadedImage { get; set; }
 
-        public ICollection<CategoryViewModel> Categories { get; set;
-        }
+        public ICollection<CategoryViewModel> Categories { get; set; }
     }
 }

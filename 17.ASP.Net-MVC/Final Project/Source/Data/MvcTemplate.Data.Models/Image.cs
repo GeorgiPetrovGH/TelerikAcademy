@@ -6,9 +6,11 @@
     using Common.Models;
 
     public class Image : BaseModel<int>
-    {        
+    {      
+        [Required]  
         public byte[] Content { get; set; }
 
+        [Required]
         public string FileExtension { get; set; }
 
         public string Path { get; set; }

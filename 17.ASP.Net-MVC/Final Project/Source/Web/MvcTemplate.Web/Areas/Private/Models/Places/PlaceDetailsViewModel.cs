@@ -8,7 +8,7 @@
     using Images;
     using Infrastructure.Mapping;
 
-    public class PlaceDetailsViewModel : IMapFrom<Place>, IHaveCustomMappings
+    public class PlaceDetailsViewModel : IMapFrom<Place>
     {
         public int Id { get; set; }
 
@@ -29,11 +29,5 @@
         public ICollection<CommentViewModel> Comments { get; set; }
 
         public ICollection<ImageViewModel> Images { get; set; }
-
-        public void CreateMappings(IMapperConfiguration configuration)
-        {
-            //configuration.CreateMap<Joke, JokeViewModel>()
-            //    .ForMember(x => x.Category, opt => opt.MapFrom(x => x.Category.Name));
-        }
     }
 }

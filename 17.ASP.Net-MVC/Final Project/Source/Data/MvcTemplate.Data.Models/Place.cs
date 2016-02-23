@@ -1,10 +1,10 @@
 ﻿namespace MvcTemplate.Data.Models
-{ 
+{
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-
-    using MvcTemplate.Data.Common.Models;
+    using System.ComponentModel.DataAnnotations.Schema;    
+    using MvcTemplate.Common;
+    using Common.Models;
 
     public class Place : BaseModel<int>
     {
@@ -20,11 +20,13 @@
         }
 
         [Required]
+        [MinLength(GlobalConstants.PlaceNameMinLength)]
+        [MaxLength(GlobalConstants.PlaceNameMaxLength)]
         public string Name { get; set; }
 
         [Required]
-        [MinLength(10)]
-        [MaxLength(200)]
+        [MinLength(GlobalConstants.PlaceDescriptionMinLength)]
+        [MaxLength(GlobalConstants.PlaceDescriptionMaxLength)]
         public string Description { get; set; }
 
         public double AveragePrice { get; set; }

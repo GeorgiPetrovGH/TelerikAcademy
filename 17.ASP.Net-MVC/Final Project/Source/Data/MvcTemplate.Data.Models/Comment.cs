@@ -2,13 +2,15 @@
 {
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+
     using Common.Models;
+    using MvcTemplate.Common;
 
     public class Comment : BaseModel<int>
     {
         [Required]
-        [MinLength(2)]
-        [MaxLength(200)]
+        [MinLength(GlobalConstants.CommentTextMinLength)]
+        [MaxLength(GlobalConstants.CommentTextMaxLength)]
         public string Text { get; set; }
 
         public string CreatorId { get; set; }
