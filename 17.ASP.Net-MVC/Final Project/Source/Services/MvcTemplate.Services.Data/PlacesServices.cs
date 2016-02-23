@@ -4,6 +4,7 @@
     using MvcTemplate.Data.Models;
     using MvcTemplate.Data.Common;
     using Common;
+    using System;
 
     public class PlacesServices : IPlacesServices
     {
@@ -30,6 +31,14 @@
         public Place GetPlaceById(int id)
         {
             return this.places.GetById(id);
+        }
+
+        public IQueryable<Place> GetPlacesByCategory(int categoryId)
+        {
+            return this.places.All()
+                .Where(x => x.CategoryId == categoryId)
+                .OrderBy(x => x.CreatedOn);
+      
         }
 
         public IQueryable<Place> GetPlacesByPage(int page, OrderByType orderby, string search)

@@ -1,0 +1,17 @@
+﻿@model MvcTemplate.Web.Areas.Private.Models.Categories.CategoriesIndexViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="transparent-background">
+    <h2>Category: @Model.CategoryName</h2>
+    @foreach (var place in Model.Places)
+    {
+        <div class="row">
+            @Html.DisplayFor(m => place, "PlaceDetails");
+        </div>
+    }
+</div>
+
+
+

@@ -198,8 +198,10 @@
     <Compile Include="App_Start\SmsService.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Areas\Private\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\Private\Controllers\CommentsController.cs" />
     <Compile Include="Areas\Private\Controllers\ImagesController.cs" />
+    <Compile Include="Areas\Private\Models\Categories\CategoriesIndexViewModel.cs" />
     <Compile Include="Areas\Private\Models\Comments\CommentInputModel.cs" />
     <Compile Include="Areas\Private\Models\Comments\CommentViewModel.cs" />
     <Compile Include="Areas\Private\Models\Images\ImageViewModel.cs" />
@@ -275,6 +277,7 @@
     <Content Include="Areas\Private\Views\Shared\_SortPartial.cshtml" />
     <Content Include="Areas\Private\Views\Shared\_CreatePlacePartial.cshtml" />
     <Content Include="Areas\Private\Views\Shared\DisplayTemplates\PlaceDetails.cshtml" />
+    <Content Include="Areas\Private\Views\Categories\Index.cshtml" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />

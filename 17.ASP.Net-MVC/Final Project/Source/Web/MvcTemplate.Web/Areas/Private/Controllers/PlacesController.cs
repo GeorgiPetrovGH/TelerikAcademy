@@ -73,11 +73,13 @@
             var comments = this.comments.GetCommentsByPlaceId(id, page).To<CommentViewModel>().ToList();
             var images = this.images.GetImagesByPlaceId(place.Id).To<ImageViewModel>().ToList();
 
-            var viewModel = AutoMapperConfig.Configuration.CreateMapper().Map<PlaceDetailsViewModel>(place);
-
-            viewModel.Comments = comments;
-            viewModel.PagesCount = this.comments.GetPagesByPlaceId(id);
-            viewModel.Images = images;
+            var viewModel = new PlaceDetailsViewModel
+            {
+                Place = AutoMapperConfig.Configuration.CreateMapper().Map<PlaceViewModel>(place),
+                PagesCount = this.comments.GetPagesByPlaceId(id),
+                Comments = comments,
+                Images = images
+            };
 
             return this.View(viewModel);
         }

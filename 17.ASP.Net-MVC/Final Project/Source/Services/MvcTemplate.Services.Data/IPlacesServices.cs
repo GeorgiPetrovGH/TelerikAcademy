@@ -15,5 +15,7 @@
         Place GetPlaceById(int id);
 
         IQueryable<Place> GetPlacesByPage(int page, OrderByType orderby, string search);
+
+        IQueryable<Place> GetPlacesByCategory(int id);
     }
 }
