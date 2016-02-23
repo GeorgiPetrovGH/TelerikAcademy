@@ -4,26 +4,34 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-<div  class="row">
-    @foreach(var image in Model.Images)
-    {
-        <div class="col-md-4">
-            <img src="@(image != null ? @Url.Action("GetImageById", "Images", new { id = image.Id, area = "Private" }) : Url.Content("~/Images/default.png"))" />
-        </div>
-    }
-</div>
-<div>
-    TODO: add to favorites
-    TODO: add more pictures 
-</div>
-<div class="row">
-    @Html.Partial("_CommentAddPartial", new CommentInputModel())
-</div>
-<div class="row">
-    @Html.Partial("_CommentsListPartial", Model.Comments)
-</div>
-<div class="row">
-    @Html.Partial("_CommentsPaginationPartial", Model.PagesCount)
+<div class="transparent-background">
+    <h2>Details</h2>
+    <div class="row padding-left">
+        @Html.DisplayFor(m => Model, "PlaceDetails")
+    </div>
+    <br />
+    <p>View all photos from the place</p>
+    <div class="row">
+        @foreach (var image in Model.Images)
+        {
+            <div class="padding-left" >
+                <img class="place-image-container" src="@(image != null ? @Url.Action("GetImageById", "Images", new { id = image.Id, area = "Private" }) : Url.Content("~/Images/default.png"))" />
+            </div>
+        }
+    </div>
+    <br />
+    <div>
+        TODO: add to favorites
+        TODO: add more pictures
+    </div>
+    <div class="row padding-left">
+        @Html.Partial("_CommentAddPartial", new CommentInputModel())
+    </div>
+    <div class="row padding-left">
+        @Html.Partial("_CommentsListPartial", Model.Comments)
+    </div>
+    <div class="row padding-left">
+        @Html.Partial("_CommentsPaginationPartial", Model.PagesCount)
+    </div>
 </div>
 

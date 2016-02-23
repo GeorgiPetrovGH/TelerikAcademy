@@ -19,6 +19,13 @@
     padding: 10px;
 }
 
+.place-detail-container {
+    max-width: 300px;
+}
+img .place-image-container{
+    max-width: 100px;
+}
+
 div .description-container {
     min-height: 100px;
     overflow: hidden;

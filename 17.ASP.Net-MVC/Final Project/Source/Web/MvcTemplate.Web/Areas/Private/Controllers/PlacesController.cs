@@ -74,6 +74,7 @@
             var images = this.images.GetImagesByPlaceId(place.Id).To<ImageViewModel>().ToList();
 
             var viewModel = AutoMapperConfig.Configuration.CreateMapper().Map<PlaceDetailsViewModel>(place);
+
             viewModel.Comments = comments;
             viewModel.PagesCount = this.comments.GetPagesByPlaceId(id);
             viewModel.Images = images;

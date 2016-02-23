@@ -5,12 +5,16 @@
         <div class="media-body">
             @foreach (var item in Model)
             {
-                <h4 class="media-heading">
-                    <span class="label label-primary">@item.CreatorName</span>
-                    <span> commented on</span>
-                    <span class="label label-default">@item.CreatedOn</span>
-                </h4>
-                <br />
+                <p>
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span>Created by </span>
+                    @item.CreatorName
+                    <span>on </span>
+                    @item.CreatedOn
+                </p>
+                <p>
+                    @item.Name
+                </p>
                 <p class="break-word">
                     @item.Text
                 </p>

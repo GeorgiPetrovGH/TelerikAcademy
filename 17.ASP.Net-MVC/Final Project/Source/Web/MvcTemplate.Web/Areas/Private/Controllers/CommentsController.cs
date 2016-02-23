@@ -26,6 +26,7 @@
 
             var comment = new Comment()
             {
+                Name = model.Name,
                 Text = model.Text,
                 CreatorId = this.User.Identity.GetUserId().ToString(),
                 PlaceId = placeId

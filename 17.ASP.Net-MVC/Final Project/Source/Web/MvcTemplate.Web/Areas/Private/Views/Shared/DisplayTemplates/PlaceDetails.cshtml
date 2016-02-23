@@ -1,0 +1,19 @@
+﻿@model MvcTemplate.Web.Areas.Private.Models.Places.PlaceDetailsViewModel
+<div class="col-md-6">
+    <div class="row">
+        <h3 class="pull-left">@Model.Name</h3>
+        <div class="pull-right">
+            <p>Rating @Model.RatingValue</p>
+            <p>Voted by @Model.RatingCount</p>
+        </div>
+    </div>
+    <div class="row">
+        <h5>@Model.CategoryName</h5>
+    </div>
+    <div class="row">
+        <p>@Model.Description</p>
+    </div>
+    <div class="row">
+        Created by @Model.CreatorName on @Model.CreatedOn
+    </div>
+</div>

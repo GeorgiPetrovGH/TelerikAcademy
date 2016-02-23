@@ -1,7 +1,7 @@
 ﻿@model int
 
 @{
-    var currentPage = int.Parse(Request.QueryString["page"] == null ? "0" : Request.QueryString["page"]);
+    var currentPage = int.Parse(Request.QueryString["page"] == null ? "1" : Request.QueryString["page"]);
     var placeId = int.Parse(Url.RequestContext.RouteData.Values["id"].ToString());
 
     <nav>

@@ -37,7 +37,7 @@
             var admin = new User()
             {
                 Email = "admin@site.com",
-                UserName = "admin@site.com",
+                UserName = "Admin site",
                 FirstName = "Admin12",
                 LastName = "Admin12"
             };
@@ -57,7 +57,7 @@
             var user = new User()
             {
                 Email = "user1@site.com",
-                UserName = "user1@site.com",
+                UserName = "User1 site",
                 FirstName = "User1",
                 LastName = "User1"
             };
@@ -107,7 +107,8 @@
                 Name = name,
                 Description = description,
                 CreatorId = user.Id,
-                CategoryId = category.Id                
+                CategoryId = category.Id,
+                AveragePrice = Rand.Next(1, 16)               
             };
 
             var image = this.GetDefaultImage(imagePath);

@@ -38,13 +38,13 @@
             <div class="col-md-10">
                 <select id="CategoryId" name="CategoryId">
                     @foreach (var cat in Model.Categories)
-                {
+                    {
                         <option value="@cat.Id">@cat.Name</option>
                     }
                 </select>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group padding-left">
             <input type="submit" value="Add place" class="btn btn-success" />
         </div>
     }

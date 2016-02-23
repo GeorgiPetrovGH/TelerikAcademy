@@ -5,55 +5,66 @@
 }
 
 <div class="transparent-background">
-    <div class="row">
+    <div class="row padding-left">
         <h3>Find your food place here</h3>
     </div>
-    <div class="row">
+    <div class="row padding-left">
         <div class="pull-left">
-            @Html.Partial("_CreatePlacePartial")            
+            @Html.Partial("_CreatePlacePartial")
         </div>
-        <div class="pull-right">
+        <div class="pull-right padding-right">
             @Html.Partial("_SearchPartial", Model)
         </div>
     </div>
-    <div class="row">
+    <div class="row padding-left">
         @Html.Partial("_SortPartial", Model)
     </div>
-    <div class="row padding-left">
+    <div class="row padding-left
         @foreach (var place in Model.Places)
         {
-            <div class="row">
-                <h3 class="pull-left">
-                    <a href="/Private/Places/Details/@place.Id">@place.Name</a>
-                </h3>
-                <div class="pull-right">
-                    <p>Rating @place.RatingValue</p>
-                    <p>Voted by @place.RatingCount</p>
-                </div>                
+            <div class=" row">
+        <div class-col-md-8>
+            <h3 class="pull-left padding-left">
+                <a href="/Private/Places/Details/@place.Id">@place.Name</a>
+            </h3>
+            <div class="pull-right padding-right">
+                <p>Rating @place.RatingValue</p>
+                <p>Voted by @place.RatingCount</p>
             </div>
-            <div class="row">
-                <h5>@place.CategoryName</h5>
-            </div>
-            <div class="row">
-                <p>@place.Description</p>
-            </div>
-            <div class="row">
-                Created by @place.CreatorName on @place.CreatedOn
-            </div>
-        }
+        </div>
     </div>
-    <nav>
-        <ul class="pagination">
-            @if (Model.Page > 1)
+            <div class="row">
+                <div class="col-md-8">
+                    <h5>
+                        <a href="/Private/Categories/@place.CategoryId">@place.CategoryName</a>
+                    </h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    @place.Description
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-8">
+                    Created by @place.CreatorName on @place.CreatedOn
+                </div>
+            </div>
+}
+</div>
+<nav>
+    <ul class="pagination">
+        @if (Model.Page > 1)
             {
-                <li>
-                    <a href="/Private/Places/All?page=@(Model.Page - 1)&orderBy=@Model.OrderBy&search=@Model.Search" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-            }
+            <li>
+                <a href="/Private/Places/All?page=@(Model.Page - 1)&orderBy=@Model.OrderBy&search=@Model.Search" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+        }
 
-            @for (int i = 1; i < Model.TotalPages; i++)
+        @for (int i = 1; i < Model.TotalPages; i++)
             {
                 var className = string.Empty;
                 if (Model.Page == i)
@@ -63,15 +74,15 @@
                 <li class="@className">
                     <a href="/Private/Places/All?page=@i&orderBy=@Model.OrderBy&search=@Model.Search">@i</a>
                 </li>
-            }
-            @if (Model.Page < Model.TotalPages)
+        }
+        @if (Model.Page < Model.TotalPages)
             {
-                <li>
-                    <a href="/Private/Places/All?page=@(Model.Page + 1)&orderBy=@Model.OrderBy&search=@Model.Search" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            }
-        </ul>
-    </nav>
+            <li>
+                <a href="/Private/Places/All?page=@(Model.Page + 1)&orderBy=@Model.OrderBy&search=@Model.Search" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        }
+    </ul>
+</nav>
 </div>
