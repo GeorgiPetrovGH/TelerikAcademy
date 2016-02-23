@@ -1,11 +1,9 @@
 ﻿namespace MvcTemplate.Web.Areas.Private.Models.Places
 {
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.Web;
-    using System.Web.Mvc;
-    using AutoMapper;
+    using Common;
     using MvcTemplate.Data.Models;
     using MvcTemplate.Web.Infrastructure.Mapping;
     using ViewModels.Categories;
@@ -13,12 +11,19 @@
 
     public class PlaceInputModel : IMapFrom<Place>, IHaveImage
     {
+        [Required]
+        [MinLength(GlobalConstants.PlaceNameMinLength)]
+        [MaxLength(GlobalConstants.PlaceNameMaxLength)]
         public string Name { get; set; }
 
+        [Required]
+        [MinLength(GlobalConstants.PlaceDescriptionMinLength)]
+        [MaxLength(GlobalConstants.PlaceDescriptionMaxLength)]
         public string Description { get; set; }
 
         public double AveragePrice { get; set; }
 
+        [Required]
         [Display(Name = "Category Name")]
         public int CategoryId { get; set; }
 

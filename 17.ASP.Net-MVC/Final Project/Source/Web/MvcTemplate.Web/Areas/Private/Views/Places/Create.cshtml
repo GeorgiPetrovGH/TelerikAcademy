@@ -3,51 +3,52 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Add new place</h2>
+<div class="transparent-background">
+    <h2>Add new place</h2>
 
-@using (Html.BeginForm("Create", "Places", new { area = "Private" }, FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
+    @using (Html.BeginForm("Create", "Places", new { area = "Private" }, FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
 
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.Name, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Name, new { placeholder = "Enter name" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.Description, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Description, new { placeholder = "Enter Description" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.AveragePrice, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.AveragePrice, new { placeholder = "Enter price" })
-        </div>
-    </div>    
-
-    @Html.EditorFor(model => model.UploadedImage, "ImageUpload")
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.CategoryId, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            <select id="CategoryId" name="CategoryId">
-                @foreach (var cat in Model.Categories)
-                {
-                    <option value="@cat.Id">@cat.Name</option>
-                }
-            </select>
-        </div>
-    </div>
+        @Html.ValidationSummary("", new { @class = "text-danger" })
 
         <div class="form-group">
-            <input type="submit" value="Add place" class="btn btn-primary btn-lg" />
+            @Html.LabelFor(model => model.Name, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { placeholder = "Enter name" })
+            </div>
         </div>
-}
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description, new { placeholder = "Enter Description" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.AveragePrice, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AveragePrice, new { placeholder = "Enter price" })
+            </div>
+        </div>
+
+        @Html.EditorFor(model => model.UploadedImage, "ImageUpload")
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CategoryId, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                <select id="CategoryId" name="CategoryId">
+                    @foreach (var cat in Model.Categories)
+                {
+                        <option value="@cat.Id">@cat.Name</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add place" class="btn btn-success" />
+        </div>
+    }
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
