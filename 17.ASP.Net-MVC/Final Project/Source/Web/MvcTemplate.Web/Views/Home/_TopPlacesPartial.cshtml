@@ -3,16 +3,26 @@
     ViewBag.Title = "Partial Home Page Statistics";
 }
 
-<div class="row">
-    @foreach (var place in Model.Places)
-    {
-        <div class="col-md-3">
-            <div class="row">
-                @place.Name
+@foreach (var place in Model.Places)
+{
+    <div class="col-md-4 top-place-container">
+        <div class="row">
+            <div class="pull-left">
+                <h2>@place.Name</h2>
             </div>
-            <div class="row">
-                @place.Description
+            <div class="pull-right padding-right">
+                <h3>@place.RatingValue</h3>
             </div>
         </div>
-    }
-</div>
+        <div class="row">
+            <h4>@place.CategoryName</h4>
+        </div>
+        <div class="row description-container">
+            <p>@place.Description</p>
+        </div>
+        <div class="row image-container">
+            <img src="@(place.Image != null ? @Url.Action("GetImageById", "Images", new { id = place.Image.Id, area = "Private" }) : Url.Content("~/Images/default.png"))" />
+        </div>
+    </div>
+}
+

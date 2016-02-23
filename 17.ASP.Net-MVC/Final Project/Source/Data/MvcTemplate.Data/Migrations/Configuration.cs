@@ -41,7 +41,7 @@ namespace MvcTemplate.Data.Migrations
             var users = context.Users.Take(5).ToList();
             var categories = context.Categories.ToList();
 
-            this.seeder.SeedSinglePlace(context, "The Little things", "Nice cosy place", categories[9], users[0], TheLittleThingsImagePath);
+            this.seeder.SeedSinglePlace(context, "The Little things", TheLittleThingsDescription, categories[9], users[0], TheLittleThingsImagePath);
             this.seeder.SeedSinglePlace(context, "Sun and Moon", SunMoonDescription, categories[9], users[0], SunMoonImagePath);
             this.seeder.SeedSinglePlace(context, "Mimas", MimasDescription, categories[8], users[0], MimasImagePath);
 

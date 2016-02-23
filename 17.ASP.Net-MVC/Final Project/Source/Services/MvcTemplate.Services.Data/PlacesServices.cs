@@ -1,8 +1,6 @@
 ﻿namespace MvcTemplate.Services.Data
 {
-    using System;
     using System.Linq;
-
     using MvcTemplate.Data.Models;
     using MvcTemplate.Data.Common;
     using Common;
@@ -63,7 +61,9 @@
 
         public IQueryable<Place> GetTopPlaces(int count)
         {
-            return this.places.All().Take(count);
+            return this.places.All()
+                .OrderByDescending(x => x.Ratings.Sum(v => v.Value))
+                .Take(count);
         }
     }
 }
