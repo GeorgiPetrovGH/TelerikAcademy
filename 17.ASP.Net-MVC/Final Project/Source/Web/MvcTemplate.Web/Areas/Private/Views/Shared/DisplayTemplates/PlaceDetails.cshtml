@@ -1,14 +1,18 @@
 ﻿@model MvcTemplate.Web.Areas.Private.Models.PlaceViewModel
 <div class="col-md-6">
     <div class="row">
-        <h3 class="pull-left">@Model.Name</h3>
+        <h3 class="pull-left">
+            <a href="/Private/Places/Details/@Model.Id">@Model.Name</a>
+        </h3>
         <div class="pull-right">
             <p>Rating @Model.RatingValue</p>
             <p>Voted by @Model.RatingCount</p>
         </div>
     </div>
     <div class="row">
-        <h5>@Model.CategoryName</h5>
+        <h5>
+            <a href="/Private/Categories/Index/@Model.CategoryId">@Model.CategoryName</a>        
+        </h5>
     </div>
     <div class="row">
         <p>@Model.Description</p>

@@ -2,9 +2,9 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;    
-    using MvcTemplate.Common;
+    using System.ComponentModel.DataAnnotations.Schema; 
     using Common.Models;
+    using MvcTemplate.Common;
 
     public class Place : BaseModel<int>
     {

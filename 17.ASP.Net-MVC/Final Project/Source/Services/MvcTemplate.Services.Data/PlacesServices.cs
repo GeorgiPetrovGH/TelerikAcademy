@@ -1,10 +1,9 @@
 ﻿namespace MvcTemplate.Services.Data
 {
     using System.Linq;
-    using MvcTemplate.Data.Models;
-    using MvcTemplate.Data.Common;
     using Common;
-    using System;
+    using MvcTemplate.Data.Common;
+    using MvcTemplate.Data.Models; 
 
     public class PlacesServices : IPlacesServices
     {
@@ -37,8 +36,7 @@
         {
             return this.places.All()
                 .Where(x => x.CategoryId == categoryId)
-                .OrderBy(x => x.CreatedOn);
-      
+                .OrderBy(x => x.CreatedOn);      
         }
 
         public IQueryable<Place> GetPlacesByPage(int page, OrderByType orderby, string search)
@@ -64,8 +62,14 @@
                             .ThenByDescending(x => x.CreatedOn)
                             .Skip((page - 1) * GlobalConstants.PlacesPerPage)
                             .Take(GlobalConstants.PlacesPerPage);
-
             }
+        }
+
+        public IQueryable<Place> GetPlacesByUser(string id)
+        {
+            return this.places.All()
+                .Where(x => x.CreatorId == id)
+                .OrderByDescending(x => x.CreatedOn);
         }
 
         public IQueryable<Place> GetTopPlaces(int count)

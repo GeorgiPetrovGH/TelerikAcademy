@@ -24,7 +24,6 @@
         public const int UserLastNameMinLength = 2;
         public const int UserLastNameMaxLength = 100;
 
-
         public const int CommentsPerPage = 5;
         public const int PlacesPerPage = 5;
     }

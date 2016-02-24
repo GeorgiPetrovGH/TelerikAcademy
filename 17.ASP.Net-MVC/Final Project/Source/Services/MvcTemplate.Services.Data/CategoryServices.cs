@@ -1,12 +1,8 @@
 ﻿namespace MvcTemplate.Services.Data
 {
+    using System.Linq;
     using MvcTemplate.Data.Common;
     using MvcTemplate.Data.Models;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     public class CategoriesServices : ICategoriesServices
     {

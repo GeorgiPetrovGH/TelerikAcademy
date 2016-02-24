@@ -209,6 +209,7 @@
     <Compile Include="Areas\Private\Models\Places\PlaceInputModel.cs" />
     <Compile Include="Areas\Private\Models\Places\PlacesListViewModel.cs" />
     <Compile Include="Areas\Private\Models\Places\PlaceViewModel.cs" />
+    <Compile Include="Areas\Private\Models\Users\UserInfoViewModel.cs" />
     <Compile Include="Areas\Private\PrivateAreaRegistration.cs" />
     <Compile Include="Areas\Private\Controllers\PlacesController.cs" />
     <Compile Include="Areas\Private\Controllers\UsersController.cs" />

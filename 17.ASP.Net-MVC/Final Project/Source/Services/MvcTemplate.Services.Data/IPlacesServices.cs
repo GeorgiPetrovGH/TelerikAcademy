@@ -1,8 +1,8 @@
 ﻿namespace MvcTemplate.Services.Data
 {
+    using System.Linq;
     using Common;
     using MvcTemplate.Data.Models;
-    using System.Linq;
 
     public interface IPlacesServices
     {
@@ -17,5 +17,7 @@
         IQueryable<Place> GetPlacesByPage(int page, OrderByType orderby, string search);
 
         IQueryable<Place> GetPlacesByCategory(int id);
+
+        IQueryable<Place> GetPlacesByUser(string id);
     }
 }

@@ -7,8 +7,8 @@
     <h2>Category: @Model.CategoryName</h2>
     @foreach (var place in Model.Places)
     {
-        <div class="row">
-            @Html.DisplayFor(m => place, "PlaceDetails");
+        <div class="row padding-left">
+            @Html.DisplayFor(m => place, "PlaceDetails")
         </div>
     }
 </div>

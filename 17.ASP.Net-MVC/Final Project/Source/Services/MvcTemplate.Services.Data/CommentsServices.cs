@@ -1,10 +1,10 @@
 ﻿namespace MvcTemplate.Services.Data
 {
+    using System;
+    using System.Linq;
+    using Common;
     using MvcTemplate.Data.Common;
     using MvcTemplate.Data.Models;
-    using System.Linq;
-    using System;
-    using Common;
 
     public class CommentsServices : ICommentsServices
     {

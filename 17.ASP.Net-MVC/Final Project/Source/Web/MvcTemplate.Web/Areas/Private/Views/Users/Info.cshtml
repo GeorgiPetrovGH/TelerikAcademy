@@ -1,6 +1,22 @@
-﻿@{
+﻿@model MvcTemplate.Web.Areas.Private.Models.Users.UserInfoViewModel
+@{
     ViewBag.Title = "Profile";
 }
 
-<h2>Profile</h2>
+<div class="transparent-background">
+    <h2>Profile Information</h2>
+    <div class="row padding-left">
+        <h4 class="">@Model.UserName</h4>
+    </div>    
+    <div class="row padding-left">
+        <h4 class="">My Places:</h4>        
+        @foreach (var place in Model.Places)
+        {
+            <div class="row padding-left">
+                @Html.DisplayFor(m => place, "PlaceDetails")
+            </div>
+            <br />
+        }
+    </div>
+</div>
 

@@ -1,19 +1,18 @@
 ﻿namespace MvcTemplate.Data.Migrations
 {
-    using System.IO;
-    using System.Reflection;
-    using System.Linq;
     using System;
     using System.Collections.Generic;
+    using System.IO;    
+    using System.Linq;
+    using System.Reflection;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using Models;
-    using MvcTemplate.Common;
-    
+    using MvcTemplate.Common;    
 
     public class SeedData
     {
-        public static Random Rand = new Random();
+        private static Random rand = new Random();
 
         public void SeedRoles(ApplicationDbContext context)
         {
@@ -108,7 +107,7 @@
                 Description = description,
                 CreatorId = user.Id,
                 CategoryId = category.Id,
-                AveragePrice = Rand.Next(1, 16)               
+                AveragePrice = rand.Next(1, 16)               
             };
 
             var image = this.GetDefaultImage(imagePath);
@@ -127,7 +126,7 @@
             {
                 var rating = new Rating
                 {
-                    Value = Rand.Next(1, 6),
+                    Value = rand.Next(1, 6),
                     CreatorId = user.Id
                 };
 

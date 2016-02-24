@@ -1,7 +1,7 @@
 ﻿namespace MvcTemplate.Services.Data
-{
-    using MvcTemplate.Data.Models;
+{    
     using System.Linq;
+    using MvcTemplate.Data.Models;
 
     public interface IImagesServices
     {

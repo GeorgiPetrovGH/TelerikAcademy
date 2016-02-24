@@ -13,9 +13,9 @@
         {
             this.images = images;
         }
+
         public Image CreateImage(Image image)
         {
-
             this.images.Add(image);
             this.images.Save();
 
