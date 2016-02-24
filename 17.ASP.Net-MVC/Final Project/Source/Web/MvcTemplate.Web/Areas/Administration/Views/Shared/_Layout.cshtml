@@ -8,7 +8,6 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/bundles/kendo-css")
-
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -24,8 +23,18 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("View all places", "All", "Places", new { area = "Private"}, null)</li>  
-                    <li>@Html.ActionLink("Create place", "Create", "Places", new { area = "Private" }, null)</li>                   
+                    <li>@Html.ActionLink("View all places", "All", "Places", new { area = "Private" }, null)</li>
+                    <li>@Html.ActionLink("Create place", "Create", "Places", new { area = "Private" }, null)</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin panel <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Places", "Index", "Places", new { area = "Administration" }, null)</li>
+                            <li>@Html.ActionLink("Comments", "Index", "Comments", new { area = "Administration" }, null)</li>
+                            <li>@Html.ActionLink("Categories", "Index", "Categories", new { area = "Administration" }, null)</li>
+                            <li>@Html.ActionLink("Ratings", "Index", "Ratings", new { area = "Administration" }, null)</li>
+                            <li>@Html.ActionLink("Images", "Index", "Images", new { area = "Administration" }, null)</li>
+                        </ul>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -38,7 +47,6 @@
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-
     @Scripts.Render("~/bundles/kendo")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

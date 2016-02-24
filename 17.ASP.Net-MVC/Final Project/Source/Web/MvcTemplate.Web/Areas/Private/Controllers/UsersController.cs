@@ -8,6 +8,7 @@
     using Models.Users;
     using Services.Data;
 
+    [Authorize]
     public class UsersController : Controller
     {
         private readonly IPlacesServices places;

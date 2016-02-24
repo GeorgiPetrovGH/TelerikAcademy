@@ -7,6 +7,7 @@
     using Models.Categories;
     using Services.Data;
 
+    [Authorize]
     public class CategoriesController : Controller
     {
         private readonly IPlacesServices places;

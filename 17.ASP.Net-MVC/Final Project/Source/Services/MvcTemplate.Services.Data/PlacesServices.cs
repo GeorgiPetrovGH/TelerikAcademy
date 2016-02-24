@@ -1,9 +1,9 @@
 ﻿namespace MvcTemplate.Services.Data
-{
+{    
     using System.Linq;
     using Common;
     using MvcTemplate.Data.Common;
-    using MvcTemplate.Data.Models; 
+    using MvcTemplate.Data.Models;
 
     public class PlacesServices : IPlacesServices
     {
@@ -22,7 +22,26 @@
             return place;
         }
 
-        public IQueryable<Place> GetAllPlaces()
+        public void DeletePlace(int id)
+        {
+            var placeToDelete = this.places.GetById(id);
+            this.places.HardDelete(placeToDelete);
+
+            this.places.Save();
+        }
+
+        public void EditPlace(int id, string name, string description, double averagePrice)
+        {
+            var placeToBeEdited = this.places.GetById(id);
+
+            placeToBeEdited.Name = name;
+            placeToBeEdited.Description = description;
+            placeToBeEdited.AveragePrice = averagePrice;
+
+            this.places.Save();
+        }
+
+        public IQueryable<Place> GetAll()
         {
             return this.places.All();
         }

@@ -23,6 +23,29 @@
             return comment;
         }
 
+        public void DeleteComment(int id)
+        {
+            var commentToDelete = this.comments.GetById(id);
+            this.comments.HardDelete(commentToDelete);
+
+            this.comments.Save();
+        }
+
+        public void EditComment(int id, string name, string text)
+        {
+            var commentToBeEdited = this.comments.GetById(id);
+
+            commentToBeEdited.Name = name;
+            commentToBeEdited.Text = text;
+
+            this.comments.Save();
+        }
+
+        public IQueryable<Comment> GetAll()
+        {
+            return this.comments.All();
+        }
+
         public IQueryable<Comment> GetAllComments(int placeId)
         {
             return this.comments.All();

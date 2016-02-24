@@ -1,0 +1,34 @@
+﻿@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<MvcTemplate.Web.Areas.Administration.Models.Categories.CategoriesGridViewModel>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+          columns.Bound(c => c.Id);
+          columns.Bound(c => c.Name);          
+          columns.Bound(c => c.CreatedOn).Format("{0:yyyy-MM-dd HH:mm}");
+          columns.Bound(c => c.ModifiedOn).Format("{0:yyyy-MM-dd HH:mm}");
+          columns.Bound(c => c.IsDeleted);
+          columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+      })
+      .ToolBar(toolbar =>
+      {
+          toolbar.Create();
+      })
+      .ColumnMenu()
+      .Editable(editable => editable.Mode(GridEditMode.PopUp))
+      .Pageable()
+      .Sortable(sortable =>
+      {
+          sortable.SortMode(GridSortMode.MultipleColumn);
+      })
+      .Filterable()
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.Id))
+          .Read(read => read.Action("Categories_Read", "Categories"))
+          .Create(create => create.Action("Categories_Create", "Categories"))
+          .Update(update => update.Action("Categories_Update", "Categories"))
+          .Destroy(destroy => destroy.Action("Categories_Destroy", "Categories"))
+      )
+)

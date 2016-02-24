@@ -6,6 +6,7 @@
     using Models.Comments;
     using Services.Data;
 
+    [Authorize]
     public class CommentsController : Controller
     {
         private readonly ICommentsServices comments;

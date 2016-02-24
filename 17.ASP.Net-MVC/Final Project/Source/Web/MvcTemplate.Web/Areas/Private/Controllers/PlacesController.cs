@@ -54,7 +54,7 @@
                 viewModel.Search = string.Empty;
             }
 
-            var itemsCount = this.places.GetAllPlaces().Count(x => x.Name.Contains(viewModel.Search));
+            var itemsCount = this.places.GetAll().Count(x => x.Name.Contains(viewModel.Search));
             var totalPages = (int)Math.Ceiling(itemsCount / (decimal)GlobalConstants.PlacesPerPage);
 
             var places = this.places.GetPlacesByPage((int)viewModel.Page, (OrderByType)viewModel.OrderBy, viewModel.Search)

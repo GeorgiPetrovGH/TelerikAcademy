@@ -3,6 +3,7 @@
     using MvcTemplate.Data.Common;
     using MvcTemplate.Data.Models;
     using System.Linq;
+    using System;
 
     public class RatingsServices : IRatingsServices
     {
@@ -25,6 +26,28 @@
                 this.ratings.Save();
             }
             return rating;
+        }
+
+        public void DeleteRating(int id)
+        {
+            var ratingToDelete = this.ratings.GetById(id);
+            this.ratings.HardDelete(ratingToDelete);
+
+            this.ratings.Save();
+        }
+
+        public void EditRating(int id, int value)
+        {
+            var ratingToBeEdited = this.ratings.GetById(id);
+
+            ratingToBeEdited.Value = value;
+
+            this.ratings.Save();
+        }
+
+        public IQueryable<Rating> GetAll()
+        {
+            return this.ratings.All();
         }
     }
 }

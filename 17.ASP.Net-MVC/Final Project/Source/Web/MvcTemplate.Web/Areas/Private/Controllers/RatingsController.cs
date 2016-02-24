@@ -5,6 +5,7 @@
     using Microsoft.AspNet.Identity;
     using Services.Data;
 
+    [Authorize]
     public class RatingsController : Controller
     {
         private readonly IRatingsServices ratings;

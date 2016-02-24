@@ -25,6 +25,15 @@
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/kendo").Include(
+                "~/Scripts/Kendo/kendo.all.min.js",
+                "~/Scripts/Kendo/kendo.aspnetmvc.min.js"));
+
+            bundles.Add(new StyleBundle("~/bundles/kendo-css").Include(
+                "~/Content/Kendo/kendo.common.min.css",
+                "~/Content/Kendo/kendo.common-bootstrap.min.css",
+                "~/Content/Kendo/kendo.flat.min.css"));
         }
     }
 }

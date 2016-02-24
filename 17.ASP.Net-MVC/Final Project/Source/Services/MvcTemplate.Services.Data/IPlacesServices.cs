@@ -8,7 +8,7 @@
     {
         IQueryable<Place> GetTopPlaces(int count);
 
-        IQueryable<Place> GetAllPlaces();
+        IQueryable<Place> GetAll();
 
         Place CreatePlace(Place place);
 
@@ -19,5 +19,9 @@
         IQueryable<Place> GetPlacesByCategory(int id);
 
         IQueryable<Place> GetPlacesByUser(string id);
+
+        void EditPlace(int id, string name, string description, double averagePrice);
+
+        void DeletePlace(int id);
     }
 }

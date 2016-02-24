@@ -9,6 +9,10 @@
     {
         IQueryable<Category> GetAll();
 
-        Category EnsureCategory(string name);        
+        Category EnsureCategory(string name);
+
+        void EditCategory(int id, string name);
+
+        void DeleteCategory(int id);
     }    
 }

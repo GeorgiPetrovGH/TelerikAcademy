@@ -1,5 +1,6 @@
 ﻿namespace MvcTemplate.Services.Data
 {
+    using System;
     using System.Linq;
     using MvcTemplate.Data.Common;
     using MvcTemplate.Data.Models;
@@ -11,6 +12,23 @@
         public CategoriesServices(IDbRepository<Category> categories)
         {
             this.categories = categories;
+        }
+
+        public void DeleteCategory(int id)
+        {
+            var categoryToDelete = this.categories.GetById(id);
+            this.categories.HardDelete(categoryToDelete);
+
+            this.categories.Save();
+        }
+
+        public void EditCategory(int id, string name)
+        {
+            var categoryToBeEdited = this.categories.GetById(id);
+
+            categoryToBeEdited.Name = name;
+
+            this.categories.Save();
         }
 
         public Category EnsureCategory(string name)
