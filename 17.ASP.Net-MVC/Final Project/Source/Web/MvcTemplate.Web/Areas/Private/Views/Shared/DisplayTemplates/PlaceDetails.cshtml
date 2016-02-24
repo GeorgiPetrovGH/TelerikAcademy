@@ -5,8 +5,21 @@
             <a href="/Private/Places/Details/@Model.Id">@Model.Name</a>
         </h3>
         <div class="pull-right">
-            <p>Rating @Model.RatingValue</p>
-            <p>Voted by @Model.RatingCount</p>
+            <div class="row text-center">
+                <p>Rating @Model.RatingValue<span> / 5</span></p>
+                <p>Voted by @Model.RatingCount</p>
+            </div>
+            <div class="row">
+                <div class="row rateBtns" hidden>
+                    <btn class="btn btn-success col-md-1 rateBtn" id="btn1" data-value="1" data-id="@Model.Id">1</btn>
+                    <btn class="btn btn-success col-md-1 rateBtn" id="btn2" data-value="2" data-id="@Model.Id">2</btn>
+                    <btn class="btn btn-success col-md-1 rateBtn" id="btn3" data-value="3" data-id="@Model.Id">3</btn>
+                    <btn class="btn btn-success col-md-1 rateBtn" id="btn3" data-value="3" data-id="@Model.Id">4</btn>
+                    <btn class="btn btn-success col-md-1 rateBtn" id="btn3" data-value="3" data-id="@Model.Id">5</btn>
+                </div>
+                <btn class="btn btn-success showRateBtn">Rate</btn>
+            </div> 
+            @Html.DisplayFor(m => Model, "AddRatingGroup")       
         </div>
     </div>
     <div class="row">

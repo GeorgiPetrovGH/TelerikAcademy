@@ -50,6 +50,8 @@
     <Compile Include="IPlacesServices.cs" />
     <Compile Include="PlacesServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IRatingsServices.cs" />
+    <Compile Include="RatingsServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\MvcTemplate.Common\MvcTemplate.Common.csproj">

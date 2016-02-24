@@ -34,3 +34,23 @@
     </div>
 </div>
 
+@section scripts {
+    <script>
+        $('.showRateBtn').click(function () {
+            $(this).hide();
+            $(this).siblings('.rateBtns').show();
+        })
+
+        $('.rateBtn').click(function () {
+            $(this).parent().hide();
+            $(this).parent().siblings('.rateBtns').show();
+
+            var id = $(this).attr('data-id');
+            var value = $(this).attr('data-value');
+            $.post("/Private/Ratings/AddRating", { id: id, value: value }, function (data) {
+                location.reload();
+            });
+        });
+    </script>
+}
+
