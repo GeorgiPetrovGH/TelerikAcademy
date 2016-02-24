@@ -1,0 +1,27 @@
+﻿@model MvcTemplate.Web.Areas.Private.Models.PlaceViewModel
+@{
+    ViewBag.Title = "AddRatingGroup";
+}
+@{ 
+    double rating = 0;
+    if (Model.RatingValue != null)
+    {
+        rating = (double)Model.RatingValue / (double)Model.RatingCount;
+    } 
+}
+
+<div class="row text-center">
+    <p>Rating @rating<span> / 5</span></p>
+    <p>Voted by @Model.RatingCount</p>
+</div>
+<div class="row">
+    <div class="row rateBtns" hidden>
+        <btn class="btn btn-success col-md-1 rateBtn" id="btn1" data-value="1" data-id="@Model.Id">1 vote</btn>
+        <btn class="btn btn-success col-md-1 rateBtn" id="btn2" data-value="2" data-id="@Model.Id">2 vote</btn>
+        <btn class="btn btn-success col-md-1 rateBtn" id="btn3" data-value="3" data-id="@Model.Id">3 vote</btn>
+        <btn class="btn btn-success col-md-1 rateBtn" id="btn3" data-value="3" data-id="@Model.Id">4 vote</btn>
+        <btn class="btn btn-success col-md-1 rateBtn" id="btn3" data-value="3" data-id="@Model.Id">5 vote</btn>
+    </div>
+    <btn class="btn btn-success col-md-1 showRateBtn">Rate</btn>    
+</div>
+

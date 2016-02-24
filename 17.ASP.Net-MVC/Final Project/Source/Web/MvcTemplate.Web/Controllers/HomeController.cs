@@ -37,5 +37,10 @@
 
             return this.View(viewModel);
         }
+
+        public ActionResult Error()
+        {
+            return this.View();
+        }
     }
 }

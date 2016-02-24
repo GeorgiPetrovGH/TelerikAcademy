@@ -1,4 +1,12 @@
 ﻿@model MvcTemplate.Web.Areas.Private.Models.PlaceViewModel
+@{
+    double rating = 0;
+    if (Model.RatingValue != null)
+    {
+        rating = (double)Model.RatingValue / (double)Model.RatingCount;
+    }
+    var result = string.Format("{0:0.00}", rating);
+}
 <div class="col-md-6">
     <div class="row">
         <h3 class="pull-left">
@@ -6,7 +14,7 @@
         </h3>
         <div class="pull-right">
             <div class="row text-center">
-                <p>Rating @Model.RatingValue<span> / 5</span></p>
+                <p>Rating @result<span> / 5</span></p>
                 <p>Voted by @Model.RatingCount</p>
             </div>
             <div class="row">
@@ -18,8 +26,7 @@
                     <btn class="btn btn-success col-md-1 rateBtn" id="btn3" data-value="3" data-id="@Model.Id">5</btn>
                 </div>
                 <btn class="btn btn-success showRateBtn">Rate</btn>
-            </div> 
-            @Html.DisplayFor(m => Model, "AddRatingGroup")       
+            </div>                   
         </div>
     </div>
     <div class="row">
